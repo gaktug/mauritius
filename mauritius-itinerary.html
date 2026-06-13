@@ -3,1076 +3,153 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>The Mauritius Dossier — 12–19 December · A Family Itinerary</title>
-<meta name="description" content="An eight-day Mauritius itinerary for three families: a split-stay across the North and West coasts, four sightseeing days, hotel and tour picks, island transport, budget breakdown and practical info." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<title>Mauritius Family Trip · 12–19 Dec 2026</title>
+<meta name="description" content="Compact interactive Mauritius itinerary for 3 families, with hotels, tours, links and booking checklist." />
 <style>
-/* ===== THE MAURITIUS DOSSIER — editorial tropical (compact) ===== */
-:root{
-  --ink:#16231f; --ink-2:#3a4f49; --ink-3:#6f827b;
-  --paper:#fcf8ef; --paper-2:#f6efdf; --sand:#f3ecdb; --sand-deep:#e7d8ba; --rule:#d8c9a6;
-  --teal:#0e423e; --teal-2:#0a302d;
-  --lagoon:#2fa8a0; --lagoon-soft:#d4ece9;
-  --coral:#e35a3a; --coral-soft:#f7d9cf;
-  --clay:#b98a3e; --clay-soft:#ecd9b0;
-  --maxw:1180px; --gut:clamp(1.1rem,4vw,2.6rem);
-  --r:18px; --r-sm:12px;
-  --font-display:"Fraunces",Georgia,serif;
-  --font-body:"Hanken Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  --font-mono:"DM Mono",ui-monospace,monospace;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{margin:0;font-family:var(--font-body);color:var(--ink);background:var(--sand);
-  line-height:1.55;font-size:clamp(15px,1vw + 12px,17px);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
-  background:radial-gradient(120% 80% at 80% -10%, rgba(227,90,58,.10), transparent 55%),
-    radial-gradient(120% 90% at -10% 10%, rgba(47,168,160,.10), transparent 55%),
-    linear-gradient(180deg,#f7f1e2 0%, #f1e8d4 100%)}
-body::after{content:"";position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.5;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.4'/%3E%3C/svg%3E");mix-blend-mode:multiply}
-.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gut);position:relative;z-index:2}
-a{color:inherit}
-.skip{position:absolute;left:-999px;top:0;background:var(--teal);color:#fff;padding:.7rem 1.1rem;border-radius:0 0 10px 0;z-index:200;font-weight:600}
-.skip:focus{left:0}
-
-/* type */
-.serif{font-family:var(--font-display)}
-.mono{font-family:var(--font-mono);letter-spacing:.02em}
-.eyebrow{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;color:var(--teal);font-weight:500;display:inline-flex;align-items:center;gap:.6em}
-.eyebrow::before{content:"";width:24px;height:1px;background:var(--teal);opacity:.5}
-.lede{font-family:var(--font-display);font-size:clamp(1.02rem,1.8vw,1.28rem);line-height:1.45;color:var(--ink-2);font-weight:400}
-
-/* nav */
-.topbar{position:sticky;top:0;z-index:90;backdrop-filter:saturate(140%) blur(9px);background:rgba(243,236,219,.85);border-bottom:1px solid rgba(216,201,166,.7)}
-.topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.55rem}
-.brand{display:flex;align-items:center;gap:.55rem;font-family:var(--font-display);font-weight:600;font-size:1rem}
-.brand .mark{width:26px;height:26px;border-radius:50%;flex:none;background:radial-gradient(circle at 35% 30%, #ffd9a8, var(--coral) 60%, #b53f24);box-shadow:0 0 0 2px var(--sand-deep) inset}
-.brand small{display:block;font-family:var(--font-mono);font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-3);font-weight:500}
-nav.primary{display:flex;gap:.1rem}
-nav.primary a{font-size:.8rem;font-weight:600;color:var(--ink-2);text-decoration:none;padding:.4rem .6rem;border-radius:9px;transition:.2s}
-nav.primary a:hover{color:var(--teal);background:rgba(255,255,255,.5)}
-nav.primary a.active{color:var(--teal);background:rgba(47,168,160,.14)}
-.menu-btn{display:none;background:none;border:1px solid var(--rule);border-radius:10px;padding:.4rem .55rem;cursor:pointer;color:var(--ink)}
-@media (max-width:860px){
-  nav.primary{position:absolute;top:100%;right:var(--gut);left:var(--gut);flex-direction:column;gap:.1rem;padding:.5rem;background:var(--paper);border:1px solid var(--rule);border-radius:14px;box-shadow:0 24px 50px -28px rgba(14,66,62,.5);display:none}
-  nav.primary.open{display:flex}
-  nav.primary a{padding:.65rem .8rem}
-  .menu-btn{display:block}
-}
-
-/* hero */
-.hero{position:relative;padding-top:clamp(1.4rem,3.5vw,2.6rem);padding-bottom:clamp(1rem,3vw,1.8rem);overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1.25fr .8fr;gap:clamp(1.2rem,3vw,2.6rem);align-items:center}
-@media (max-width:880px){.hero-grid{grid-template-columns:1fr;gap:1.8rem}}
-.masthead{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:clamp(1rem,2.5vw,1.6rem);padding-bottom:.7rem;border-bottom:1px solid var(--rule)}
-.masthead .issue{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-3)}
-.masthead .issue b{color:var(--coral)}
-.hero h1{font-family:var(--font-display);font-weight:600;font-size:clamp(2.9rem,11vw,6.8rem);line-height:.86;letter-spacing:-.03em;margin:0;color:var(--teal-2)}
-.hero h1 .accent{font-style:italic;font-weight:400;color:var(--coral);display:block;font-size:.34em;letter-spacing:-.01em;margin-top:.2em}
-.hero .sub{margin-top:.9rem;max-width:36ch}
-.factrow{display:flex;flex-wrap:wrap;gap:.8rem 1.8rem;margin-top:1.3rem;padding-top:1rem;border-top:1px solid var(--rule)}
-.factrow .k{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3)}
-.factrow .v{font-family:var(--font-display);font-size:1.25rem;font-weight:500;color:var(--teal-2);line-height:1.1}
-.hero-art{position:relative;display:grid;place-items:center;min-height:240px}
-.sun{position:absolute;width:min(330px,82%);aspect-ratio:1;border-radius:50%;
-  background:var(--teal);
-  background-image:url("https://commons.wikimedia.org/wiki/Special:FilePath/Le%20Morne%2C%20Mauritius%20(Unsplash).jpg?width=900");
-  background-size:cover;background-position:center;
-  box-shadow:0 30px 70px -30px rgba(14,66,62,.6)}
-.sun::before{content:"";position:absolute;inset:0;border-radius:50%;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.7' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.3'/%3E%3C/svg%3E");mix-blend-mode:overlay;opacity:.6}
-.stamp{position:relative;z-index:3;transform:rotate(-7deg);border:2.5px dashed var(--teal);color:var(--teal);background:rgba(252,248,239,.7);border-radius:14px;padding:.7rem 1rem;text-align:center;box-shadow:0 14px 30px -18px rgba(14,66,62,.6);font-family:var(--font-mono)}
-.stamp .t{font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3)}
-.stamp .d{font-family:var(--font-display);font-size:1.35rem;font-weight:600;line-height:1;margin:.15rem 0}
-.stamp .place{font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--coral);font-weight:600}
-.stamp .bar{height:1px;background:var(--teal);opacity:.4;margin:.35rem 0}
-
-/* section frame */
-section{position:relative;z-index:2}
-.sec{padding-block:clamp(1.8rem,4vw,3rem)}
-.sec-head{display:grid;grid-template-columns:auto 1fr;gap:clamp(.9rem,3vw,2.4rem);align-items:end;margin-bottom:clamp(1.1rem,2.4vw,1.6rem);padding-bottom:.9rem;border-bottom:1px solid var(--rule)}
-.sec-num{font-family:var(--font-display);font-style:italic;font-weight:400;font-size:clamp(2.2rem,6vw,3.6rem);line-height:.8;color:var(--coral)}
-.sec-head h2{font-family:var(--font-display);font-weight:600;font-size:clamp(1.5rem,3.4vw,2.3rem);line-height:1.03;letter-spacing:-.02em;margin:.25rem 0 0;color:var(--teal-2)}
-.sec-head p{margin:.4rem 0 0;color:var(--ink-2);max-width:62ch;font-size:.94rem}
-@media (max-width:680px){.sec-head{grid-template-columns:1fr;gap:.3rem}.sec-num{font-size:2rem}}
-
-/* glance */
-.glance{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:var(--r);overflow:hidden}
-.glance .g{background:var(--paper);padding:.8rem .8rem}
-.glance .g .ic{color:var(--lagoon);margin-bottom:.3rem}
-.glance .g .k{font-family:var(--font-mono);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
-.glance .g .v{font-family:var(--font-display);font-size:1.05rem;font-weight:600;color:var(--teal-2);line-height:1.15;margin-top:.1rem}
-@media (max-width:820px){.glance{grid-template-columns:repeat(3,1fr)}}
-@media (max-width:460px){.glance{grid-template-columns:repeat(2,1fr)}}
-
-/* strategy */
-.split{display:grid;grid-template-columns:1fr auto 1fr;gap:clamp(.9rem,2.5vw,1.8rem);align-items:stretch}
-@media (max-width:840px){.split{grid-template-columns:1fr}}
-.stay-card{background:var(--paper);border:1px solid var(--rule);border-radius:var(--r);overflow:hidden;position:relative}
-.stay-card .stay-photo{height:120px;background-size:cover;background-position:center;background-color:var(--teal)}
-.stay-card .stay-body{padding:1.1rem 1.2rem 1.2rem}
-.stay-card .tag{font-family:var(--font-mono);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;padding:.2rem .5rem;border-radius:30px;background:var(--clay-soft);color:#7a5a1f;font-weight:600;display:inline-block;margin-bottom:.4rem}
-.stay-card.west .tag{background:var(--lagoon-soft);color:#156f68}
-.stay-card h3{font-family:var(--font-display);font-size:1.32rem;font-weight:600;margin:0 0 .2rem;color:var(--teal-2);line-height:1.05}
-.stay-card .nights{font-family:var(--font-mono);font-size:.72rem;color:var(--coral);font-weight:600}
-.stay-card p{color:var(--ink-2);margin:.5rem 0 0;font-size:.9rem}
-.stay-card ul{margin:.55rem 0 0;padding-left:0;list-style:none;display:grid;gap:.3rem}
-.stay-card li{position:relative;padding-left:1.2rem;font-size:.86rem;color:var(--ink-2)}
-.stay-card li::before{content:"";position:absolute;left:0;top:.58em;width:6px;height:6px;border-radius:50%;background:var(--coral)}
-.stay-card.west li::before{background:var(--lagoon)}
-.split-arrow{display:grid;place-items:center;font-family:var(--font-mono);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);text-align:center}
-.split-arrow svg{width:30px;height:30px;color:var(--teal)}
-@media (max-width:840px){.split-arrow svg{transform:rotate(90deg)}}
-
-/* itinerary */
-.tl-legend{display:flex;flex-wrap:wrap;gap:.4rem .85rem;margin-bottom:1.2rem;font-size:.76rem}
-.tl-legend span{display:inline-flex;align-items:center;gap:.4rem;color:var(--ink-2);font-weight:600}
-.tl-legend i{width:10px;height:10px;border-radius:50%;display:inline-block}
-.tl{position:relative;margin-left:6px}
-.tl::before{content:"";position:absolute;left:22px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--coral),var(--clay),var(--lagoon),var(--teal));opacity:.4}
-.day{display:grid;grid-template-columns:50px 1fr;gap:clamp(.7rem,2vw,1.3rem);position:relative;padding-bottom:clamp(.7rem,1.6vw,1rem)}
-.day:last-child{padding-bottom:0}
-.node{position:relative;z-index:2}
-.node .dot{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:#fff;font-family:var(--font-display);font-weight:700;font-size:1.05rem;box-shadow:0 0 0 5px var(--sand),0 6px 16px -8px rgba(0,0,0,.4)}
-.node .dot.tour{background:var(--coral)}.node .dot.chill{background:var(--lagoon)}.node .dot.travel{background:var(--clay)}.node .dot.move{background:var(--teal)}
-.card{background:var(--paper);border:1px solid var(--rule);border-radius:var(--r);padding:clamp(.85rem,1.8vw,1.1rem);box-shadow:0 18px 40px -34px rgba(14,66,62,.55);transition:transform .25s,box-shadow .25s}
-.card:hover{transform:translateY(-2px);box-shadow:0 24px 48px -32px rgba(14,66,62,.6)}
-.card-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem .9rem;justify-content:space-between}
-.card-head h3{font-family:var(--font-display);font-size:clamp(1.12rem,2.2vw,1.4rem);font-weight:600;line-height:1.1;margin:0;color:var(--teal-2)}
-.card-meta{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.04em;color:var(--ink-3)}
-.card-meta b{color:var(--ink-2)}
-.chip{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--font-mono);font-size:.6rem;letter-spacing:.13em;text-transform:uppercase;font-weight:600;padding:.22rem .5rem;border-radius:30px}
-.chip.tour{background:var(--coral-soft);color:#a83a1e}.chip.chill{background:var(--lagoon-soft);color:#156f68}.chip.travel{background:var(--clay-soft);color:#7a5a1f}.chip.move{background:#cfe0dd;color:var(--teal-2)}
-.card p.body{margin:.45rem 0 0;color:var(--ink-2);font-size:.92rem}
-.hl{margin:.6rem 0 0;padding:0;list-style:none;display:grid;gap:.28rem}
-.hl li{position:relative;padding-left:1.4rem;font-size:.88rem;color:var(--ink)}
-.hl li svg{position:absolute;left:0;top:.18rem;width:13px;height:13px;color:var(--coral)}
-.hl li.lagoon svg{color:var(--lagoon)}.hl li.teal svg{color:var(--teal)}
-.hl b{font-weight:700}
-.note{margin-top:.6rem;padding:.5rem .7rem;border-radius:var(--r-sm);background:var(--paper-2);font-size:.82rem;color:var(--ink-2);display:flex;gap:.5rem;align-items:flex-start}
-.note svg{width:14px;height:14px;flex:none;color:var(--clay);margin-top:.18rem}
-
-/* ===== HOTELS: calculator + menu ===== */
-.calc{background:linear-gradient(165deg,#fcf8ef,#eef6f4);border:1px solid var(--rule);border-radius:var(--r);padding:clamp(1rem,2.4vw,1.5rem);margin-bottom:1.4rem;box-shadow:0 20px 46px -34px rgba(14,66,62,.55)}
-.calc-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.5rem 1rem;margin-bottom:.9rem}
-.calc-head h3{font-family:var(--font-display);font-size:1.2rem;margin:0;color:var(--teal-2);font-weight:600}
-.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:end}
-@media (max-width:680px){.calc-grid{grid-template-columns:1fr}}
-.calc label{display:block;font-family:var(--font-mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:.3rem}
-.calc select{width:100%;font-family:var(--font-body);font-size:.92rem;font-weight:600;color:var(--teal-2);padding:.6rem .7rem;border:1.5px solid var(--rule);border-radius:10px;background:var(--paper) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath d='M2 4l4 4 4-4' fill='none' stroke='%230e423e' stroke-width='2'/%3E%3C/svg%3E") no-repeat right .7rem center;appearance:none;-webkit-appearance:none;cursor:pointer}
-.calc select:focus{outline:none;border-color:var(--lagoon)}
-.calc-out{background:var(--paper);border:1px solid var(--rule);border-radius:12px;padding:.7rem .9rem}
-.calc-total{font-family:var(--font-display);font-size:1.6rem;font-weight:700;color:var(--teal-2);line-height:1}
-.calc-total small{font-family:var(--font-mono);font-size:.6rem;color:var(--ink-3);font-weight:400;margin-left:.4rem;letter-spacing:.04em}
-.calc-bar{height:9px;background:var(--sand-deep);border-radius:30px;overflow:hidden;margin-top:.6rem}
-.calc-bar i{display:block;height:100%;width:0;background:var(--lagoon);border-radius:30px;transition:width .45s cubic-bezier(.2,.7,.2,1),background .3s}
-.calc-bar i.warn{background:var(--clay)}.calc-bar i.over{background:var(--coral)}
-.calc-status{font-size:.8rem;font-weight:600;margin-top:.45rem}
-.calc-status.ok{color:var(--teal)}.calc-status.warn{color:var(--clay)}.calc-status.over{color:var(--coral)}
-
-.coast-label{display:flex;align-items:center;gap:.7rem;margin:1.6rem 0 .8rem}
-.coast-label h3{font-family:var(--font-display);font-size:1.15rem;margin:0;color:var(--teal-2);font-weight:600}
-.coast-label .pip{width:11px;height:11px;border-radius:50%}
-.coast-label .pip.north{background:var(--coral)}.coast-label .pip.west{background:var(--lagoon)}.coast-label .pip.east{background:var(--clay)}
-.coast-label .line{flex:1;height:1px;background:var(--rule)}
-.coast-label small{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.1em;color:var(--ink-3);text-transform:uppercase}
-
-.hmenu{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(.6rem,1.6vw,.9rem)}
-@media (max-width:900px){.hmenu{grid-template-columns:repeat(3,1fr)}}
-@media (max-width:680px){.hmenu{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:420px){.hmenu{grid-template-columns:1fr}}
-.hcard{background:var(--paper);border:1px solid var(--rule);border-radius:var(--r-sm);overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
-.hcard:hover{transform:translateY(-3px);box-shadow:0 20px 40px -28px rgba(14,66,62,.6)}
-.hphoto{height:96px;background-size:cover;background-position:center;background-color:var(--teal);position:relative}
-.hphoto .hstars{position:absolute;top:.4rem;left:.4rem;font-family:var(--font-mono);font-size:.58rem;font-weight:600;background:rgba(14,66,62,.78);color:#fff;padding:.12rem .4rem;border-radius:30px;backdrop-filter:blur(2px)}
-.hphoto .pick{position:absolute;top:.4rem;right:.4rem;font-family:var(--font-mono);font-size:.54rem;font-weight:600;background:var(--coral);color:#fff;padding:.12rem .4rem;border-radius:30px}
-.hbody{padding:.6rem .65rem .7rem;display:flex;flex-direction:column;flex:1}
-.hbody h4{font-family:var(--font-display);font-size:.98rem;font-weight:600;margin:0;color:var(--teal-2);line-height:1.12}
-.hbody h4 a{color:inherit;text-decoration:none;border-bottom:1.4px solid transparent;transition:.2s}
-.hbody h4 a:hover{border-color:var(--coral)}
-.hbody .hvibe{font-size:.72rem;color:var(--ink-3);margin-top:.15rem}
-.hbody .hfoot{display:flex;align-items:baseline;justify-content:space-between;gap:.4rem;margin-top:auto;padding-top:.5rem}
-.hbody .hprice{font-family:var(--font-display);font-weight:700;color:var(--coral);font-size:.95rem;line-height:1}
-.hbody .hprice small{font-family:var(--font-mono);font-size:.54rem;color:var(--ink-3);font-weight:400}
-.hbody .hbook{font-family:var(--font-mono);font-size:.6rem;font-weight:600;color:var(--teal);text-decoration:none;border-bottom:1.4px solid var(--clay)}
-.hbody .hbook:hover{color:var(--coral);border-color:var(--coral)}
-
-/* tours */
-.tour-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(.8rem,2vw,1.2rem)}
-@media (max-width:760px){.tour-grid{grid-template-columns:1fr}}
-.tour{background:var(--paper);border:1px solid var(--rule);border-radius:var(--r);padding:1.1rem;position:relative;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
-.tour:hover{transform:translateY(-3px);box-shadow:0 24px 50px -34px rgba(14,66,62,.6)}
-.tour .ribbon{position:absolute;top:-.55rem;right:.9rem;font-family:var(--font-mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;background:var(--teal);color:#fff;padding:.2rem .5rem;border-radius:30px;font-weight:600}
-.tour .ico{width:38px;height:38px;border-radius:10px;background:var(--coral-soft);display:grid;place-items:center;margin-bottom:.6rem;color:var(--coral)}
-.tour.chill-t .ico{background:var(--lagoon-soft);color:var(--lagoon)}
-.tour h4{font-family:var(--font-display);font-size:1.12rem;font-weight:600;margin:0 0 .12rem;color:var(--teal-2);line-height:1.1}
-.tour .loc{font-family:var(--font-mono);font-size:.64rem;letter-spacing:.06em;color:var(--ink-3);margin-bottom:.45rem}
-.tour p{color:var(--ink-2);font-size:.88rem;margin:0;flex:1}
-.tour .priceline{display:flex;flex-wrap:wrap;gap:.3rem 1.1rem;margin-top:.75rem;padding-top:.65rem;border-top:1px dashed var(--rule)}
-.tour .pr .k{font-family:var(--font-mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);display:block}
-.tour .pr .v{font-weight:700;color:var(--teal-2);font-size:.86rem}
-.tour .daytag{position:absolute;top:1.1rem;left:1.1rem;font-family:var(--font-mono);font-size:.58rem;letter-spacing:.08em;color:var(--coral);font-weight:600;text-transform:uppercase}
-
-/* transport */
-.tx-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(.9rem,2.4vw,1.5rem)}
-@media (max-width:860px){.tx-grid{grid-template-columns:1fr}}
-.tx-card{background:var(--paper);border:1px solid var(--rule);border-radius:var(--r);padding:1.2rem}
-.tx-card h4{font-family:var(--font-display);font-size:1.2rem;margin:0 0 .2rem;color:var(--teal-2)}
-.tx-card .leg{display:grid;grid-template-columns:1fr auto;gap:.3rem .9rem;padding:.6rem 0;border-bottom:1px dashed var(--rule);align-items:baseline}
-.tx-card .leg:last-of-type{border-bottom:none}
-.tx-card .leg .route{font-weight:600;font-size:.92rem}
-.tx-card .leg .route small{display:block;font-weight:400;color:var(--ink-3);font-size:.76rem;font-family:var(--font-mono)}
-.tx-card .leg .price{font-family:var(--font-display);font-weight:600;color:var(--coral);white-space:nowrap}
-.tx-card .leg .price small{display:block;text-align:right;font-family:var(--font-mono);font-size:.6rem;color:var(--ink-3);font-weight:400}
-.pick{background:var(--teal);color:#eaf4f2;border-radius:var(--r);padding:1.2rem}
-.pick .eyebrow{color:#9fd6cf}.pick .eyebrow::before{background:#9fd6cf}
-.pick h4{font-family:var(--font-display);color:#fff;margin:.35rem 0 .5rem;font-size:1.2rem}
-.pick p{margin:.35rem 0;font-size:.9rem;color:#d6e7e3}
-.pick .big{font-family:var(--font-display);font-size:1.9rem;font-weight:600;color:#fff;line-height:1}
-.pick ul{list-style:none;padding:0;margin:.8rem 0 0;display:grid;gap:.4rem}
-.pick li{position:relative;padding-left:1.3rem;font-size:.88rem;color:#e6f2ef}
-.pick li::before{content:"✓";position:absolute;left:0;color:var(--lagoon);font-weight:800}
-.flights{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin-bottom:1.4rem}
-@media (max-width:900px){.flights{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:520px){.flights{grid-template-columns:1fr}}
-.flight-card{background:var(--paper);border:1px solid var(--rule);border-radius:var(--r-sm);padding:.9rem 1rem}
-.fc-head{display:flex;justify-content:space-between;align-items:baseline;gap:.4rem;margin-bottom:.35rem}
-.fc-head .carrier{font-family:var(--font-display);font-weight:600;font-size:1.02rem;color:var(--teal-2)}
-.fc-head .route{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.05em;color:var(--ink-3)}
-.flight-card p{margin:0 0 .45rem;font-size:.8rem;color:var(--ink-2);min-height:2.4em}
-.fc-price{font-family:var(--font-display);font-weight:600;color:var(--coral);font-size:.98rem;line-height:1.1}
-.fc-price small{font-family:var(--font-mono);font-size:.56rem;color:var(--ink-3);font-weight:400;display:block}
-.fc-link{display:inline-block;margin-top:.5rem;font-family:var(--font-mono);font-size:.64rem;font-weight:600;color:var(--teal);text-decoration:none;border-bottom:1.4px solid var(--clay);padding-bottom:1px}
-.fc-link:hover{color:var(--coral);border-color:var(--coral)}
-
-/* budget */
-.budget-wrap{display:grid;grid-template-columns:1.45fr 1fr;gap:clamp(.9rem,2.4vw,1.5rem);align-items:start}
-@media (max-width:880px){.budget-wrap{grid-template-columns:1fr}}
-table{width:100%;border-collapse:collapse;background:var(--paper);border-radius:var(--r);overflow:hidden;box-shadow:0 22px 50px -36px rgba(14,66,62,.6);border:1px solid var(--rule)}
-caption{text-align:left;padding:.8rem 1rem .3rem;font-family:var(--font-mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
-th,td{text-align:left;padding:.6rem .9rem;border-bottom:1px solid var(--rule);font-size:.88rem;vertical-align:top}
-th{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);background:var(--paper-2);font-weight:600}
-td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
-tbody tr:last-child td{border-bottom:none}
-tr.total td{font-weight:700;background:var(--lagoon-soft);color:var(--teal-2);font-family:var(--font-display);font-size:1rem}
-tr.gd td{background:var(--paper-2);font-weight:700;color:var(--teal-2)}
-.badge-ok{display:inline-flex;align-items:center;gap:.3rem;font-family:var(--font-mono);font-size:.58rem;letter-spacing:.04em;background:var(--lagoon);color:#fff;padding:.15rem .45rem;border-radius:30px;font-weight:600;margin-left:.4rem}
-.b-callout{background:var(--paper);border:1px solid var(--rule);border-radius:var(--r);padding:1.2rem}
-.b-callout h4{font-family:var(--font-display);margin:0 0 .7rem;font-size:1.15rem;color:var(--teal-2)}
-.b-row{display:flex;justify-content:space-between;gap:1rem;padding:.45rem 0;border-bottom:1px dashed var(--rule);font-size:.9rem}
-.b-row:last-child{border-bottom:none}.b-row .v{font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums}
-.b-row.big .v{font-family:var(--font-display);color:var(--coral);font-size:1.1rem}
-.b-note{margin-top:.8rem;font-size:.8rem;color:var(--ink-3);line-height:1.45}
-
-/* practical */
-.pinfo{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(.7rem,1.8vw,1rem)}
-@media (max-width:820px){.pinfo{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:480px){.pinfo{grid-template-columns:1fr}}
-.pi{background:var(--paper);border:1px solid var(--rule);border-radius:var(--r);padding:1rem}
-.pi .ico{width:32px;height:32px;border-radius:9px;background:var(--lagoon-soft);display:grid;place-items:center;color:var(--teal);margin-bottom:.5rem}
-.pi h4{font-family:var(--font-display);margin:0 0 .3rem;font-size:1.02rem;color:var(--teal-2)}
-.pi p{margin:0;font-size:.85rem;color:var(--ink-2)}
-.pi p b{color:var(--ink)}
-.kv{display:grid;grid-template-columns:auto 1fr;gap:.15rem .6rem;margin-top:.4rem;font-size:.82rem}
-.kv dt{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.04em;color:var(--ink-3);text-transform:uppercase;padding-top:.1rem}
-.kv dd{margin:0;color:var(--ink)}
-.pack{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(.9rem,2.4vw,1.8rem)}
-@media (max-width:760px){.pack{grid-template-columns:1fr}}
-.pack h4{font-family:var(--font-display);font-size:1.05rem;margin:0 0 .5rem;color:var(--teal-2);display:flex;align-items:center;gap:.5rem}
-.pack ul{list-style:none;padding:0;margin:0;display:grid;gap:.32rem;columns:2;column-gap:1.3rem}
-@media (max-width:560px){.pack ul{columns:1}}
-.pack li{position:relative;padding-left:1.4rem;font-size:.86rem;color:var(--ink-2);break-inside:avoid}
-.pack li::before{content:"";position:absolute;left:0;top:.18rem;width:12px;height:12px;border:1.5px solid var(--lagoon);border-radius:4px}
-
-/* footer */
-footer{background:var(--teal-2);color:#cfe3df;margin-top:1.5rem;padding-block:clamp(1.6rem,4vw,2.6rem)}
-footer .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:1.6rem;align-items:start}
-@media (max-width:760px){footer .wrap{grid-template-columns:1fr}}
-footer h3{font-family:var(--font-display);color:#fff;font-weight:600;font-size:1.4rem;margin:0 0 .4rem}
-footer p{margin:.3rem 0;font-size:.85rem;color:#b9d2cd;max-width:56ch}
-footer .meta{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.06em;color:#86a8a2;border-left:2px solid rgba(255,255,255,.18);padding-left:.9rem}
-footer .meta b{color:#fff;display:block;margin-bottom:.25rem;font-family:var(--font-display);font-size:.92rem;letter-spacing:0}
-.foot-note{grid-column:1/-1;margin-top:.8rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.14);font-size:.74rem;color:#86a8a2}
-
-/* reveal */
-.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
-.reveal.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
-
-/* print */
-@media print{
-  body::before,body::after{display:none}body{background:#fff}
-  .topbar,.menu-btn,.skip{display:none}
-  .card:hover,.tour:hover,.hcard:hover{transform:none;box-shadow:none}
-  .reveal{opacity:1;transform:none}.calc,.flights{break-inside:avoid}
-  .sec{break-inside:avoid;padding-block:1rem}.hero h1{font-size:3rem}
-  .hmenu{grid-template-columns:repeat(3,1fr)!important}
-}
+  :root{
+    --bg:#f6f2e8; --paper:#fffaf0; --card:#fffdf8; --ink:#19231f; --muted:#66736e;
+    --line:#ded2ba; --teal:#0e625d; --teal2:#0a4542; --aqua:#2aa7a0; --coral:#d85b3f;
+    --sand:#efe2c5; --green:#dff1df; --blue:#dcecf6; --amber:#f7e6bb; --rose:#f5d2c8;
+    --shadow:0 14px 34px rgba(50,38,18,.10); --r:18px; --max:1160px;
+  }
+  *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:radial-gradient(900px 520px at 88% -10%,rgba(216,91,63,.12),transparent),radial-gradient(800px 500px at 0% 0%,rgba(42,167,160,.14),transparent),var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.45;font-size:15px} 
+  a{color:inherit} .wrap{max-width:var(--max);margin:auto;padding:0 18px}.top{padding:28px 0 14px}.hero{display:grid;grid-template-columns:1.5fr .9fr;gap:14px}.panel,.card{background:rgba(255,253,248,.88);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}.panel{padding:22px}.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);font-weight:850;margin:0 0 8px}h1{font-size:clamp(30px,4vw,52px);line-height:1;letter-spacing:-.05em;margin:0 0 10px}h2{font-size:25px;letter-spacing:-.035em;margin:0}h3{font-size:17px;letter-spacing:-.02em;margin:0 0 6px}.lead{font-size:16px;color:#33443f;margin:0 0 16px;max-width:760px}.meta{display:flex;flex-wrap:wrap;gap:7px}.pill,.chip{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:7px 10px;font-size:12px;font-weight:800;border:1px solid rgba(14,98,93,.16);background:#eef8f5;color:#0e625d}.pill.dark{background:var(--teal);color:white}.summary{background:linear-gradient(160deg,var(--teal2),#0d6b66);color:white;padding:20px;border-radius:var(--r);box-shadow:var(--shadow)}.summary h2{color:white}.summary .row{display:grid;grid-template-columns:32px 1fr;gap:10px;margin:12px 0}.ico{width:32px;height:32px;border-radius:11px;background:rgba(255,255,255,.14);display:grid;place-items:center}.summary small{display:block;color:#bdece7;font-weight:900;text-transform:uppercase;letter-spacing:.08em}.summary span{display:block;color:white;font-weight:650}
+  nav{position:sticky;top:0;z-index:20;background:rgba(246,242,232,.86);backdrop-filter:blur(12px);border-block:1px solid rgba(222,210,186,.9)}nav .wrap{display:flex;gap:8px;overflow:auto;padding-top:9px;padding-bottom:9px}nav a,button.link{border:0;text-decoration:none;white-space:nowrap;background:rgba(255,253,248,.82);border:1px solid var(--line);border-radius:999px;padding:8px 11px;font-size:13px;font-weight:850;color:#31433e;cursor:pointer}nav a:hover,button.link:hover{background:white;color:var(--teal)}
+  section{padding:18px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:0 0 10px}.note{color:var(--muted);margin:0;font-size:13px}.grid{display:grid;gap:12px}.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.card{padding:15px}.card.topPick{outline:2px solid rgba(14,98,93,.23)}.tag{display:inline-flex;border-radius:999px;padding:5px 8px;background:var(--blue);font-size:11px;font-weight:900;color:#16405b;text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px}.tag.good{background:var(--green);color:#27522c}.tag.warn{background:var(--amber);color:#6b4b05}.tag.red{background:var(--rose);color:#80311e}.muted{color:var(--muted)}.links{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}.links a,.miniBtn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 9px;text-decoration:none;font-size:12px;font-weight:850;color:var(--teal);cursor:pointer}.links a:hover,.miniBtn:hover{border-color:var(--teal);background:#f2fbfa}.score{font-weight:950;color:var(--teal)}
+  .tabs{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px}.tab{border:1px solid var(--line);background:rgba(255,253,248,.8);border-radius:999px;padding:8px 10px;font-weight:850;cursor:pointer}.tab.active{background:var(--teal);color:white;border-color:var(--teal)}.hidden{display:none!important}
+  .timeline{display:grid;gap:10px}.day{display:grid;grid-template-columns:92px 1fr;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}.date{background:#143b39;color:white;padding:12px;text-align:center}.date b{display:block;font-size:18px}.date span{font-size:12px;color:#cdebe8;font-weight:800}.daybody{padding:13px}.daytop{display:flex;justify-content:space-between;gap:8px;align-items:start}.intensity{border-radius:999px;padding:4px 8px;font-size:11px;font-weight:900}.low{background:var(--green);color:#25572a}.med{background:var(--amber);color:#6b4b05}.high{background:var(--rose);color:#80311e}
+  .compare{width:100%;border-collapse:collapse;background:var(--card);border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}th,td{padding:10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{background:var(--teal2);color:white;font-size:12px;text-transform:uppercase;letter-spacing:.06em}td{font-size:13px}tr:last-child td{border-bottom:0}.rank{font-weight:950;color:var(--teal);font-size:18px}.decision{font-weight:900}.decision.adopt{color:#166534}.decision.conditional{color:#92400e}.decision.reject{color:#991b1b}
+  .tools{display:flex;gap:8px;flex-wrap:wrap}.search{border:1px solid var(--line);border-radius:999px;padding:9px 12px;background:white;min-width:220px}.select{border:1px solid var(--line);border-radius:999px;padding:9px 12px;background:white}.checklist label{display:flex;gap:9px;align-items:flex-start;padding:9px;border-bottom:1px solid var(--line)}.checklist label:last-child{border-bottom:0}.checklist input{margin-top:3px;accent-color:var(--teal)}.footer{padding:24px 0 34px;color:var(--muted);font-size:12px}.drawer{position:fixed;inset:auto 14px 14px auto;z-index:50;background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);max-width:360px;padding:14px;display:none}.drawer.show{display:block}.drawer h3{margin-right:28px}.close{position:absolute;right:10px;top:8px;border:0;background:transparent;font-size:22px;cursor:pointer}.print{position:fixed;right:14px;bottom:14px;z-index:40;background:var(--teal);color:white;border:0;border-radius:999px;padding:10px 13px;font-weight:900;box-shadow:var(--shadow);cursor:pointer}
+  @media (max-width:820px){.hero,.g2,.g3,.g4{grid-template-columns:1fr}.day{grid-template-columns:1fr}.date{text-align:left}.section-head{display:block}.tools{margin-top:10px}.compare{display:block;overflow:auto}.print{display:none}}
+  @media print{nav,.tools,.print,.drawer,.tabs{display:none!important}body{background:white}.panel,.card,.summary,.compare{box-shadow:none}.wrap{max-width:none}section{break-inside:avoid}.links a::after{content:" (" attr(href) ")";font-weight:400;color:#555}}
 </style>
 </head>
 <body>
-<a class="skip" href="#main">Skip to itinerary</a>
-
-<!-- HEADER -->
-<header class="topbar">
-  <div class="wrap topbar-inner">
-    <div class="brand"><span class="mark" aria-hidden="true"></span><span>The Mauritius Dossier<small>Family Edition · No. 01</small></span></div>
-    <nav class="primary" id="nav" aria-label="Sections">
-      <a href="#glance">Overview</a>
-      <a href="#strategy">The Plan</a>
-      <a href="#itinerary">Itinerary</a>
-      <a href="#hotels">Hotels</a>
-      <a href="#tours">Tours</a>
-      <a href="#transport">Transport</a>
-      <a href="#budget">Budget</a>
-      <a href="#practical">Practical</a>
-    </nav>
-    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+<header class="top wrap">
+  <div class="hero">
+    <div class="panel">
+      <p class="eyebrow">Mauritius · family trip planner</p>
+      <h1>12–19 Dec: explore first, then disappear into the resort.</h1>
+      <p class="lead">Compact final plan for 3 families: 6 adults, kids aged 9 and 12, accommodation target around <b>AED 13k/family B&B</b>. Built from our spreadsheet and the two extra itinerary drafts.</p>
+      <div class="meta"><span class="pill dark">3 nights base</span><span class="pill">4 nights resort</span><span class="pill">2–3 tour days</span><span class="pill">private minibus</span><span class="pill">days 6–7 protected</span></div>
+    </div>
+    <aside class="summary">
+      <h2>Final recommendation</h2>
+      <div class="row"><div class="ico">🏨</div><div><small>Stay 1</small><span>Veranda Tamarin or Coin de Mire</span></div></div>
+      <div class="row"><div class="ico">🌴</div><div><small>Stay 2</small><span>Long Beach if price works; Zilwa for value</span></div></div>
+      <div class="row"><div class="ico">🚐</div><div><small>Move around</small><span>One 10–12 seater van + driver</span></div></div>
+      <div class="row"><div class="ico">⛵</div><div><small>Boat day</small><span>Choose based on final resort location</span></div></div>
+    </aside>
   </div>
 </header>
+<nav><div class="wrap"><a href="#review">Review</a><a href="#packages">Packages</a><a href="#itinerary">Itinerary</a><a href="#hotels">Hotels</a><a href="#tours">Tours</a><a href="#logistics">Logistics</a><a href="#checklist">Checklist</a><button class="link" id="toggleCompact">Compact: on</button></div></nav>
 
-<main id="main">
-
-<!-- HERO -->
-<section class="hero">
-  <div class="wrap">
-    <div class="masthead">
-      <span class="issue">Vol. I &nbsp;·&nbsp; <b>Indian Ocean</b> &nbsp;·&nbsp; Winter Escape</span>
-      <span class="issue">Prepared 13 · 06 · 2026</span>
-    </div>
-    <div class="hero-grid">
-      <div>
-        <span class="eyebrow">A family field guide to</span>
-        <h1 class="serif">Mauritius<span class="accent">eight days, three families, one lagoon.</span></h1>
-        <p class="sub lede">A relaxed split-stay — three tour-friendly nights in the North, four at a proper resort on the sunset West coast. Four days out exploring, the rest left gloriously unhurried.</p>
-        <div class="factrow">
-          <div><div class="k">Dates</div><div class="v">12 – 19 Dec</div></div>
-          <div><div class="k">Nights</div><div class="v">7</div></div>
-          <div><div class="k">Travellers</div><div class="v">6 + 2</div></div>
-          <div><div class="k">Time zone</div><div class="v">GMT+4</div></div>
-        </div>
-      </div>
-      <div class="hero-art" aria-hidden="true">
-        <div class="sun"></div>
-        <div class="stamp">
-          <div class="t">Arrive</div><div class="d">12·12·26</div>
-          <div class="bar"></div>
-          <div class="t">Depart</div><div class="d">19·12·26</div>
-          <div class="bar"></div>
-          <div class="place">Mauritius · MRU</div>
-        </div>
-      </div>
-    </div>
+<main>
+<section id="review" class="wrap">
+  <div class="section-head"><div><h2>What I changed after reviewing the extra plans</h2><p class="note">Kept the useful ideas, rejected the agenda creep.</p></div></div>
+  <div class="grid g3">
+    <div class="card"><span class="tag good">Adopted</span><h3>Coin de Mire as a real option</h3><p class="muted">Good north/budget first base with kids-club practicality. Less efficient for Chamarel than Tamarin.</p></div>
+    <div class="card"><span class="tag good">Adopted</span><h3>Sugar Museum on Day 3</h3><p class="muted">Better with kids than just market + waterfront. Fits naturally with Pamplemousses.</p></div>
+    <div class="card"><span class="tag warn">Conditional</span><h3>Boat day depends on resort</h3><p class="muted">East = Île aux Cerfs. North = Northern Isles. West = Benitiers / west-coast catamaran.</p></div>
+    <div class="card"><span class="tag warn">Optional</span><h3>Casela</h3><p class="muted">Good kids day, but only as a swap. It should not consume one of the protected resort days by default.</p></div>
+    <div class="card"><span class="tag red">Rejected</span><h3>Small rental car / convoy</h3><p class="muted">8 people + luggage + left-side roads = use one private minibus. Don’t make logistics the holiday.</p></div>
+    <div class="card"><span class="tag red">Rejected</span><h3>Packed Days 6–7</h3><p class="muted">Those days are why you pay resort money. Protect them.</p></div>
   </div>
 </section>
 
-<!-- GLANCE -->
-<section class="sec" id="glance">
-  <div class="wrap">
-    <div class="glance reveal">
-      <div class="g"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></div><div class="k">Group</div><div class="v">3 families<br>6 adults · 2 kids</div></div>
-      <div class="g"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div><div class="k">Window</div><div class="v">7 nights<br>12–19 Dec</div></div>
-      <div class="g"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6"/></svg></div><div class="k">Stays</div><div class="v">2 hotels<br>North → West</div></div>
-      <div class="g"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div class="k">Tour days</div><div class="v">4 days<br>+ 3 to unwind</div></div>
-      <div class="g"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div class="k">Stay budget</div><div class="v">~13,000 AED<br>per family (B&B)</div></div>
-      <div class="g"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2c3 3 3 17 0 20M12 2c-3 3-3 17 0 20"/></svg></div><div class="k">Climate</div><div class="v">~30°C<br>warm &amp; humid</div></div>
-    </div>
+<section id="packages" class="wrap">
+  <div class="section-head"><div><h2>Package matrix</h2><p class="note">Pick by landed total, room fit, cancellation terms — not headline nightly rate.</p></div></div>
+  <table class="compare">
+    <thead><tr><th>#</th><th>Package</th><th>First 3 nights</th><th>Last 4 nights</th><th>Est. accommodation / family</th><th>Use when</th></tr></thead>
+    <tbody id="packageRows"></tbody>
+  </table>
+</section>
+
+<section id="itinerary" class="wrap">
+  <div class="section-head"><div><h2>Updated itinerary</h2><p class="note">Three active days max, transfer day kept light, two protected resort days.</p></div><div class="tools"><button class="miniBtn" data-filter="all">All</button><button class="miniBtn" data-filter="active">Active only</button><button class="miniBtn" data-filter="chill">Chill only</button></div></div>
+  <div class="timeline" id="timeline"></div>
+</section>
+
+<section id="hotels" class="wrap">
+  <div class="section-head"><div><h2>Hotel shortlist</h2><p class="note">Clickable official links + maps. Costs are planning ranges; live quote still needed.</p></div><div class="tools"><input class="search" id="hotelSearch" placeholder="Search hotel / area / reason…"><select class="select" id="hotelUse"><option value="all">All hotels</option><option>First base</option><option>Resort</option></select></div></div>
+  <div class="grid g3" id="hotelGrid"></div>
+</section>
+
+<section id="tours" class="wrap">
+  <div class="section-head"><div><h2>Tours and services</h2><p class="note">Default: South-West + North/Port Louis + one boat day if the group wants it.</p></div><div class="tabs" id="tourTabs"></div></div>
+  <div class="grid g2" id="tourGrid"></div>
+</section>
+
+<section id="logistics" class="wrap">
+  <div class="grid g3">
+    <div class="card topPick"><span class="tag good">Transport</span><h3>One 10–12 seater minibus</h3><p class="muted">Book airport pickup/drop, Day 2, Day 3, transfer day, optional Day 5. Ask for luggage capacity, not just seats.</p><div class="links"><a href="https://mauritiustransfer.com" target="_blank">Mauritius Transfer</a><a href="https://www.barefoottransfersmauritius.com/affordable-minibus-transfer-mauritius-airport-group-transport-for-515-passengers" target="_blank">Minibus ref</a></div></div>
+    <div class="card"><span class="tag warn">Admin</span><h3>Entry form later</h3><p class="muted">Use official Mauritius platforms closer to travel. Don’t fill random third-party forms.</p><div class="links"><a href="https://safemauritius.govmu.org/" target="_blank">Travel form</a><a href="https://mauritius-airport.atol.aero/" target="_blank">MRU airport</a></div></div>
+    <div class="card"><span class="tag">Food</span><h3>Best food window: Day 3</h3><p class="muted">Port Louis market / local stops: dholl puri, gateaux piments, boulettes, mine frit, alouda. Resort days: compare B&B vs half-board.</p></div>
   </div>
 </section>
 
-<!-- STRATEGY -->
-<section class="sec" id="strategy">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="serif sec-num">01</div>
-      <div>
-        <span class="eyebrow">The split-stay idea</span>
-        <h2 class="serif">Two hotels, one trip — a base for exploring, then a base for doing nothing.</h2>
-        <p>Staying in one place means long drives to every attraction. Splitting the stay puts you next to the action first, then moves you to a calmer stretch of coast to wind down — and the South-West tour happens naturally on the day you switch.</p>
-      </div>
-    </div>
-
-    <div class="split reveal">
-      <div class="stay-card">
-        <div class="stay-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Grand%20Baie%2C%20La%20Cuvette%20Beach.jpg?width=700')"></div>
-        <div class="stay-body">
-          <span class="tag">Part 1 · Touring base</span>
-          <h3 class="serif">The North — Grand Baie</h3>
-          <span class="nights">3 nights · 12–15 Dec · Veranda Grand Baie</span>
-          <p>The island's lively hub — the catamaran pier, Port Louis and the famous botanical garden are all on your doorstep. A good-value beachfront hotel here means short transfers and full tour days.</p>
-          <ul>
-            <li>Walking distance to restaurants, shops &amp; the boat pier</li>
-            <li>30–45 min from Port Louis &amp; Pamplemousses garden</li>
-            <li>Family rooms, kids' club, two pools — easy on the budget</li>
-            <li>Prettier beaches (Trou aux Biches, Pereybere) are minutes away</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="split-arrow">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
-        <div style="margin-top:.3rem">Tour day<br>on the move</div>
-      </div>
-
-      <div class="stay-card west">
-        <div class="stay-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Spiaggia%20di%20Flic%20en%20Flac%20-%20Mauritius.jpg?width=700')"></div>
-        <div class="stay-body">
-          <span class="tag">Part 2 · Resort &amp; unwind</span>
-          <h3 class="serif">The West — Flic en Flac</h3>
-          <span class="nights">4 nights · 15–19 Dec · Sugar Beach</span>
-          <p>The longest white-sand beach, a calm reef-protected lagoon and the island's best sunsets. This is where the days slow down — big pool, beach, water sports and a Casela adventure nearby.</p>
-          <ul>
-            <li>Long, safe, shallow lagoon — perfect for the kids</li>
-            <li>Multiple restaurants, spa, kids' club</li>
-            <li>20 min from Casela World of Adventures &amp; dolphin bay</li>
-            <li>50 min from the airport on departure day</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="note reveal" style="margin-top:1rem;background:var(--paper);border:1px solid var(--rule)">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
-      <div><b>Want it more relaxed?</b> Casela (Day 5) is a half-day, so you can drop it and have <b>3 tour days + 3 full chill days</b> instead. Every tour is optional and easily swapped.</div>
-    </div>
-  </div>
+<section id="checklist" class="wrap">
+  <div class="section-head"><div><h2>Booking checklist</h2><p class="note">Tickboxes persist in your browser.</p></div><div class="tools"><button class="miniBtn" id="resetChecks">Reset ticks</button></div></div>
+  <div class="card checklist" id="checklistBox"></div>
 </section>
-
-<!-- ITINERARY -->
-<section class="sec" id="itinerary">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="serif sec-num">02</div>
-      <div>
-        <span class="eyebrow">Day by day</span>
-        <h2 class="serif">The eight-day itinerary.</h2>
-        <p>Sightseeing in <b style="color:var(--coral)">coral</b>; unwind in <b style="color:var(--lagoon)">lagoon</b>; travel &amp; hotel-move in <b style="color:var(--clay)">clay</b> and <b style="color:var(--teal)">teal</b>.</p>
-      </div>
-    </div>
-
-    <div class="tl-legend reveal">
-      <span><i style="background:var(--clay)"></i>Travel / transfer</span>
-      <span><i style="background:var(--coral)"></i>Sightseeing</span>
-      <span><i style="background:var(--teal)"></i>Hotel move</span>
-      <span><i style="background:var(--lagoon)"></i>Beach &amp; chill</span>
-    </div>
-
-    <div class="tl">
-      <article class="day reveal">
-        <div class="node"><div class="dot travel">1</div></div>
-        <div class="card">
-          <div class="card-head"><h3 class="serif">Touchdown in paradise</h3><div class="card-meta"><b>Sat 12 Dec</b> · Arrival · MRU → Grand Baie</div></div>
-          <div style="margin:.4rem 0 0"><span class="chip travel">Travel</span></div>
-          <p class="body">Clear immigration, pick up the pre-booked minibus and drive north (~65 km, just over an hour). Check in to <b>Veranda Grand Baie</b>, unpack, pool time. The only goal today is a sunset walk and an easy dinner in Grand Baie village.</p>
-          <div class="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg><div><b>Dinner idea:</b> dozens of seafront restaurants within a 5-minute walk — no reservation needed on arrival night.</div></div>
-        </div>
-      </article>
-
-      <article class="day reveal">
-        <div class="node"><div class="dot tour">2</div></div>
-        <div class="card">
-          <div class="card-head"><h3 class="serif">Catamaran to the Northern Isles</h3><div class="card-meta"><b>Sun 13 Dec</b> · Full day · Coin de Mire · Gabriel · Flat Island</div></div>
-          <div style="margin:.4rem 0 0"><span class="chip tour">Sightseeing</span> <span class="chip chill">Sea day</span></div>
-          <p class="body">Board a catamaran right from Grand Baie and sail to the protected islets offshore — the easiest, most magical family day: calm clear water, BBQ lunch on deck, snorkelling over coral gardens.</p>
-          <ul class="hl">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-6 10-6 10 6 10 6-3 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg><b>Snorkelling</b> off Îlot Gabriel — turtles, parrotfish, shallow &amp; safe</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M5 6h14M5 18h14"/></svg><b>BBQ lunch &amp; open bar</b> served onboard</li>
-            <li class="lagoon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 16c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 4-2M2 20c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 4-2"/></svg><b>Beach time</b> on Flat Island's white sand</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="day reveal">
-        <div class="node"><div class="dot tour">3</div></div>
-        <div class="card">
-          <div class="card-head"><h3 class="serif">The North by road — garden, sugar &amp; the capital</h3><div class="card-meta"><b>Mon 14 Dec</b> · Full day · Pamplemousses · Port Louis · Cap Malheureux</div></div>
-          <div style="margin:.4rem 0 0"><span class="chip tour">Sightseeing</span></div>
-          <p class="body">A driver-guide (or self-drive) loop of the north's classics — giant waterlilies at the botanical garden, Mauritian history at the sugar estate, the colours of Port Louis market, and the postcard red-roof chapel.</p>
-          <ul class="hl">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C7 7 7 12 12 22M12 22c5-10 5-15 0-20M5 10c4 1 7 1 14 0"/></svg><b>SSR Botanic Garden, Pamplemousses</b> — giant waterlilies, giant tortoises</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg><b>Port Louis</b> — Caudan Waterfront, Central Market, Citadel</li>
-            <li class="teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 20l9-16 9 16M3 20h18"/></svg><b>Cap Malheureux</b> — red-roof Notre Dame, sunset over the islets</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="day reveal">
-        <div class="node"><div class="dot move">4</div></div>
-        <div class="card">
-          <div class="card-head"><h3 class="serif">Volcano, sacred lake &amp; seven-coloured earth</h3><div class="card-meta"><b>Tue 15 Dec</b> · Full day · Check out → South-West → Flic en Flac</div></div>
-          <div style="margin:.4rem 0 0"><span class="chip tour">Sightseeing</span> <span class="chip move">Hotel move</span></div>
-          <p class="body">The clever bit: today's tour runs on the route between your two hotels. Check out, then a driver-guide takes you through the lush centre and dramatic south-west — crater, the Hindu pilgrimage lake with its 33 m Shiva statue, the Black River Gorges and the surreal rainbow sands of Chamarel — finishing at <b>Sugar Beach</b> for a sunset swim.</p>
-          <ul class="hl">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 14a4 4 0 0 1 8 0"/></svg><b>Trou aux Cerfs</b> — extinct volcano crater, panoramic views</li>
-            <li class="teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v6M9 9h6M8 21c0-4 2-6 4-6s4 2 4 6"/></svg><b>Grand Bassin (Ganga Talao)</b> — sacred lake &amp; giant Shiva statue</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18l5-7 4 5 3-4 6 6"/></svg><b>Chamarel</b> — Seven Coloured Earth, waterfall &amp; rum tasting</li>
-          </ul>
-          <div class="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg><div>Long driving day — have the driver hold your bags and leave straight after breakfast.</div></div>
-        </div>
-      </article>
-
-      <article class="day reveal">
-        <div class="node"><div class="dot tour">5</div></div>
-        <div class="card">
-          <div class="card-head"><h3 class="serif">Casela — safari, zip-lines &amp; giraffes</h3><div class="card-meta"><b>Wed 16 Dec</b> · Half day · Cascavelle (20 min from hotel)</div></div>
-          <div style="margin:.4rem 0 0"><span class="chip tour">Sightseeing</span> <span class="chip chill">Afternoon at leisure</span></div>
-          <p class="body">The one outing that thrills a 9- and a 12-year-old. Casela is part safari park, part adventure playground — a bus safari among zebras &amp; ostriches, feeding giraffes, a petting farm and zip-lines. Back to the resort by early afternoon for pool &amp; beach.</p>
-          <ul class="hl">
-            <li class="lagoon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 14a4 4 0 0 1 8 0"/></svg><b>Safari bus</b> through the African-savanna enclosures</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 16l7-12 7 12M9 9h6"/></svg><b>Zip-lines &amp; Nepalese bridge</b> for the kids (limits apply)</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="day reveal">
-        <div class="node"><div class="dot chill">6</div></div>
-        <div class="card">
-          <div class="card-head"><h3 class="serif">Do-nothing day (with an optional dolphin dawn)</h3><div class="card-meta"><b>Thu 17 Dec</b> · At leisure · Sugar Beach, Flic en Flac</div></div>
-          <div style="margin:.4rem 0 0"><span class="chip chill">Beach &amp; chill</span></div>
-          <p class="body">A proper resort day — kayaks and paddleboards on the lagoon, kids' club, a long lunch and an unhurried afternoon under a parasol. Early risers can book a 7 am <b>speedboat dolphin trip</b> from Tamarin Bay (20 min) and be back for a late breakfast.</p>
-          <ul class="hl">
-            <li class="lagoon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 16c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 4-2"/><path d="M16 11c2 0 4-1 5-3"/></svg><b>Optional:</b> dawn dolphin swim at Tamarin Bay</li>
-            <li class="lagoon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg><b>Sunset:</b> Flic en Flac faces dead west — the best on the island</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="day reveal">
-        <div class="node"><div class="dot chill">7</div></div>
-        <div class="card">
-          <div class="card-head"><h3 class="serif">Last full day — make it count, slowly</h3><div class="card-meta"><b>Fri 18 Dec</b> · At leisure · Sugar Beach, Flic en Flac</div></div>
-          <div style="margin:.4rem 0 0"><span class="chip chill">Beach &amp; chill</span></div>
-          <p class="body">A repeat of the best bits — beach, pool, one last spa session. For a finale, an <b>optional sunset catamaran</b> past Crystal Rock and the basalt cliffs of Le Morne, drinks onboard as the sun drops. Otherwise, a long farewell dinner at the resort.</p>
-          <ul class="hl"><li class="lagoon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 14c3-1 5-1 9 0s6 1 9 0"/><path d="M3 18c3-1 5-1 9 0s6 1 9 0"/></svg><b>Optional:</b> west-coast sunset catamaran</li></ul>
-        </div>
-      </article>
-
-      <article class="day reveal">
-        <div class="node"><div class="dot travel">8</div></div>
-        <div class="card">
-          <div class="card-head"><h3 class="serif">One last swim, then homeward</h3><div class="card-meta"><b>Sat 19 Dec</b> · Departure · Flic en Flac → MRU</div></div>
-          <div style="margin:.4rem 0 0"><span class="chip travel">Travel</span></div>
-          <p class="body">A slow breakfast and a final dip before check-out. The airport is only ~50 min from Flic en Flac — leave with a comfortable buffer. Land back in the UAE the same evening, same time zone, no jet lag to spoil the week.</p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- HOTELS -->
-<section class="sec" id="hotels">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="serif sec-num">03</div>
-      <div>
-        <span class="eyebrow">Where to stay</span>
-        <h2 class="serif">Mix &amp; match your two hotels.</h2>
-        <p>Pick one from the North (3 nights, your touring base) and one from the West (4 nights, your resort). The calculator tallies it against your ~13,000 AED budget live. All on B&amp;B so you're free to try local restaurants. Rates are indicative peak-December per family room — confirm live and ask for the <b>3-room group discount</b>. Fancy one spectacular resort instead of a split-stay? The <b>east coast's 5★ picks</b> are at the bottom.</p>
-      </div>
-    </div>
-
-    <!-- CALCULATOR -->
-    <div class="calc reveal">
-      <div class="calc-head">
-        <div><span class="eyebrow">The budget calculator</span><h3 class="serif">Build your combination</h3></div>
-        <small class="mono" style="color:var(--ink-3)">3 nights North + 4 nights West · B&amp;B · per family</small>
-      </div>
-      <div class="calc-grid">
-        <div>
-          <label for="northPick">North base · 3 nights</label>
-          <select id="northPick">
-            <option value="1200">Veranda Grand Baie — ~1,200</option>
-            <option value="1100">Casuarina Resort &amp; Spa — ~1,100</option>
-            <option value="950">Merville Beach Resort — ~950</option>
-            <option value="1300">Le Cardinal Exclusive — ~1,300</option>
-            <option value="1400">Le Méridien Ile Maurice — ~1,400</option>
-            <option value="2600">LUX* Grand Baie (5★) — ~2,600</option>
-            <option value="3200">Royal Palm Beachcomber (5★) — ~3,200</option>
-          </select>
-        </div>
-        <div>
-          <label for="westPick">West resort · 4 nights</label>
-          <select id="westPick">
-            <option value="2300">Sugar Beach — ~2,300</option>
-            <option value="2000">La Pirogue — ~2,000</option>
-            <option value="1700">Pearle Beach Resort &amp; Spa — ~1,700</option>
-            <option value="1600">Anelia Resort &amp; Spa — ~1,600</option>
-            <option value="2100">Sands Suites Resort &amp; Spa — ~2,100</option>
-            <option value="2400">Hilton Mauritius — ~2,400</option>
-            <option value="2500">Sofitel Imperial — ~2,500</option>
-            <option value="3600">Maradiva Villas (5★) — ~3,600</option>
-          </select>
-        </div>
-        <div class="calc-out" style="grid-column:1/-1">
-          <div class="calc-total"><span id="comboTotal">~12,800</span><small>AED / family · 7 nights B&amp;B</small></div>
-          <div class="calc-bar"><i id="comboBar"></i></div>
-          <div class="calc-status ok" id="comboStatus">✓ Within budget — ~200 AED to spare</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- NORTH MENU -->
-    <div class="coast-label reveal">
-      <span class="pip north"></span><h3 class="serif">North coast · Grand Baie area</h3><span class="line"></span><small>3 nights · touring base</small>
-    </div>
-    <div class="hmenu reveal">
-      <article class="hcard">
-        <div class="hphoto" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Grand%20Baie%2C%20La%20Cuvette%20Beach.jpg?width=600')"><span class="pick">Editor's pick</span><span class="hstars">4★</span></div>
-        <div class="hbody">
-          <h4><a href="https://www.booking.com/searchresults.html?ss=Veranda+Grand+Baie+Hotel+%26+Spa&amp;checkin=2026-12-12&amp;checkout=2026-12-15&amp;group_adults=2&amp;no_rooms=1" target="_blank" rel="noopener">Veranda Grand Baie ↗</a></h4>
-          <div class="hvibe">Lively · walkable · family</div>
-          <div class="hfoot"><span class="hprice">~1,200<small>/night</small></span><a class="hbook" href="https://www.booking.com/searchresults.html?ss=Veranda+Grand+Baie+Hotel+%26+Spa&amp;checkin=2026-12-12&amp;checkout=2026-12-15&amp;group_adults=2&amp;no_rooms=1" target="_blank" rel="noopener">Book</a></div>
-        </div>
-      </article>
-      <article class="hcard">
-        <div class="hphoto" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Resort%20hotel%20in%20Mauritius.JPG?width=600')"><span class="hstars">4★</span></div>
-        <div class="hbody">
-          <h4><a href="https://www.booking.com/searchresults.html?ss=Casuarina+Resort+%26+Spa+Mauritius" target="_blank" rel="noopener">Casuarina Resort &amp; Spa ↗</a></h4>
-          <div class="hvibe">Trou aux Biches · beachfront</div>
-          <div class="hfoot"><span class="hprice">~1,100<small>/night</small></span><a class="hbook" href="https://www.booking.com/searchresults.html?ss=Casuarina+Resort+%26+Spa+Mauritius" target="_blank" rel="noopener">Book</a></div>
-        </div>
-      </article>
-      <article class="hcard">
-        <div class="hphoto" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Grand%20Baie%2C%20La%20Cuvette%20Beach.jpg?width=600')"><span class="hstars">3★</span></div>
-        <div class="hbody">
-          <h4><a href="https://www.booking.com/searchresults.html?ss=Merville+Beach+Resort+Grand+Baie" target="_blank" rel="noopener">Merville Beach Resort ↗</a></h4>
-          <div class="hvibe">Value · central Grand Baie</div>
-          <div class="hfoot"><span class="hprice">~950<small>/night</small></span><a class="hbook" href="https://www.booking.com/searchresults.html?ss=Merville+Beach+Resort+Grand+Baie" target="_blank" rel="noopener">Book</a></div>
-        </div>
-      </article>
-      <article class="hcard">
-        <div class="hphoto" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Resort%20hotel%20in%20Mauritius.JPG?width=600')"><span class="hstars">4★</span></div>
-        <div class="hbody">
-          <h4><a href="https://www.booking.com/searchresults.html?ss=Le+Cardinal+Resort+Mauritius" target="_blank" rel="noopener">Le Cardinal Exclusive ↗</a></h4>
-          <div class="hvibe">Pereybere · quiet boutique</div>
-          <div class="hfoot"><span class="hprice">~1,300<small>/night</small></span><a class="hbook" href="https://www.booking.com/searchresults.html?ss=Le+Cardinal+Resort+Mauritius" target="_blank" rel="noopener">Book</a></div>
-        </div>
-      </article>
-      <article class="hcard">
-        <div class="hphoto" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Grand%20Baie%2C%20La%20Cuvette%20Beach.jpg?width=600')"><span class="hstars">4★</span></div>
-        <div class="hbody">
-          <h4><a href="https://www.booking.com/searchresults.html?ss=Le+Meridien+Ile+Maurice" target="_blank" rel="noopener">Le Méridien Ile Maurice ↗</a></h4>
-          <div class="hvibe">Pointe aux Piments · spacious</div>
-          <div class="hfoot"><span class="hprice">~1,400<small>/night</small></span><a class="hbook" href="https://www.booking.com/searchresults.html?ss=Le+Meridien+Ile+Maurice" target="_blank" rel="noopener">Book</a></div>
-        </div>
-      </article>
-      <article class="hcard">
-        <div class="hphoto" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Resort%20hotel%20in%20Mauritius.JPG?width=600')"><span class="hstars">5★</span></div>
-        <div class="hbody">
-          <h4><a href="https://www.booking.com/searchresults.html?ss=LUX+Grand+Baie+Mauritius" target="_blank" rel="noopener">LUX* Grand Baie ↗</a></h4>
-          <div class="hvibe">Designer · rooftop · luxury</div>
-          <div class="hfoot"><span class="hprice">~2,600<small>/night</small></span><a class="hbook" href="https://www.booking.com/searchresults.html?ss=LUX+Grand+Baie+Mauritius" target="_blank" rel="noopener">Book</a></div>
-        </div>
-      </article>
-      <article class="hcard">
-        <div class="hphoto" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Grand%20Baie%2C%20La%20Cuvette%20Beach.jpg?width=600')"><span class="hstars">5★</span></div>
-        <div class="hbody">
-          <h4><a href="https://www.booking.com/searchresults.html?ss=Royal+Palm+Beachcomber" target="_blank" rel="noopener">Royal Palm Beachcomber ↗</a></h4>
-          <div class="hvibe">Grand Baie · ultra-luxury</div>
-          <div class="hfoot"><span class="hprice">~3,200<small>/night</small></span><a class="hbook" href="https://www.booking.com/searchresults.html?ss=Royal+Palm+Beachcomber" target="_blank" rel="noopener">Book</a></div>
-        </div>
-      </article>
-    </div>
-
-    <!-- WEST MENU -->
-    <div class="coast-label reveal">
-      <span class="pip west"></span><h3 class="serif">West coast · Flic en Flac</h3><span class="line"></span><small>4 nights · resort &amp; unwind</small>
-    </div>
-    <div class="hmenu reveal">
-      <article class="hcard">
-        <div class="hphoto" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Spiaggia%20di%20Flic%20en%20Flac%20-%20Mauritius.jpg?width=600')"><span class="pick">Editor's pick</span><span class="hstars">4★ sup</span></div>
-        <div class="hbody">
-          <h4><a href="https://www.booking.com/searchresults.html?ss=Sugar+Beach+Mauritius&amp;checkin=2026-12-15&amp;checkout=2026-12-19&amp;group_adults=2&amp;no_rooms=1" target="_blank" rel="noopener">Sugar Beach ↗</a></h4>
-          <div class="hvibe">Big resort · best sunsets</div>
-          <div class="hfoot"><span class="hprice">~2,300<small>/night</small></span><a class="hbook" href="https://www.booking.com/searchresults.html?ss=Sugar+Beach+Mauritius&amp;checkin=2026-12-15&amp;checkout=2026-12-19&amp;group_adults=2&amp;no_rooms=1" target="_blank" rel="noopener">Book</a></div>
-        </div>
-      </article>
-      <article class="hcard">
-        <div class="hphoto" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Flic%20en%20flac%20m.jpg?width=600')"><span class="hstars">4★</span></div>
-        <div class="hbody">
-          <h4><a href="https://www.booking.com/searchresults.html?ss=La+Pirogue+Mauritius+Flic+en+Flac" target="_blank" rel="noopener">La Pirogue ↗</a></h4>
-          <div class="hvibe">Charming thatch · classic</div>
-          <div class="hfoot"><span class="hprice">~2,000<small>/night</small></span><a class="hbook" href="https://www.booking.com/searchresults.html?ss=La+Pirogue+Mauritius+Flic+en+Flac" target="_blank" rel="noopener">Book</a></div>
-        </div>
-      </article>
-      <article class="hcard">
-        <div class="hphoto" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Spiaggia%20di%20Flic%20en%20Flac%20-%20Mauritius.jpg?width=600')"><span class="hstars">4★</span></div>
-        <div class="hbody">
-          <h4><a href="https://www.booking.com/searchresults.html?ss=Pearle+Beach+Resort+%26+Spa" target="_blank" rel="noopener">Pearle Beach Resort &amp; Spa ↗</a></h4>
-          <div class="hvibe">Value · beachfront</div>
-          <div class="hfoot"><span class="hprice">~1,700<small>/night</small></span><a class="hbook" href="https://www.booking.com/searchresults.html?ss=Pearle+Beach+Resort+%26+Spa" target="_blank" rel="noopener">Book</a></div>
-        </div>
-      </article>
-      <article class="hcard">
-        <div class="hphoto" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Flic%20en%20flac%20m.jpg?width=600')"><span class="hstars">4★</span></div>
-        <div class="hbody">
-          <h4><a href="https://www.booking.com/searchresults.html?ss=Anelia+Resort+%26+Spa+Mauritius" target="_blank" rel="noopener">Anelia Resort &amp; Spa ↗</a></h4>
-          <div class="hvibe">Family · great value</div>
-          <div class="hfoot"><span class="hprice">~1,600<small>/night</small></span><a class="hbook" href="https://www.booking.com/searchresults.html?ss=Anelia+Resort+%26+Spa+Mauritius" target="_blank" rel="noopener">Book</a></div>
-        </div>
-      </article>
-      <article class="hcard">
-        <div class="hphoto" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Le%20Morne%2C%20Mauritius%20(Unsplash).jpg?width=600')"><span class="hstars">4★</span></div>
-        <div class="hbody">
-          <h4><a href="https://www.booking.com/searchresults.html?ss=Sands+Suites+Resort+%26+Spa+Mauritius" target="_blank" rel="noopener">Sands Suites Resort ↗</a></h4>
-          <div class="hvibe">All-suite · lagoon views</div>
-          <div class="hfoot"><span class="hprice">~2,100<small>/night</small></span><a class="hbook" href="https://www.booking.com/searchresults.html?ss=Sands+Suites+Resort+%26+Spa+Mauritius" target="_blank" rel="noopener">Book</a></div>
-        </div>
-      </article>
-      <article class="hcard">
-        <div class="hphoto" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Le%20Morne%2C%20Mauritius%20(Unsplash).jpg?width=600')"><span class="hstars">4★</span></div>
-        <div class="hbody">
-          <h4><a href="https://www.booking.com/searchresults.html?ss=Hilton+Mauritius+Resort+%26+Spa" target="_blank" rel="noopener">Hilton Mauritius ↗</a></h4>
-          <div class="hvibe">Iconic · modern</div>
-          <div class="hfoot"><span class="hprice">~2,400<small>/night</small></span><a class="hbook" href="https://www.booking.com/searchresults.html?ss=Hilton+Mauritius+Resort+%26+Spa" target="_blank" rel="noopener">Book</a></div>
-        </div>
-      </article>
-      <article class="hcard">
-        <div class="hphoto" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Le%20Morne%20Peninsula%20in%20Mauritius%20(53697779236).jpg?width=600')"><span class="hstars">5★</span></div>
-        <div class="hbody">
-          <h4><a href="https://www.booking.com/searchresults.html?ss=Sofitel+Imperial+Mauritius" target="_blank" rel="noopener">Sofitel Imperial ↗</a></h4>
-          <div class="hvibe">French elegance · gardens</div>
-          <div class="hfoot"><span class="hprice">~2,500<small>/night</small></span><a class="hbook" href="https://www.booking.com/searchresults.html?ss=Sofitel+Imperial+Mauritius" target="_blank" rel="noopener">Book</a></div>
-        </div>
-      </article>
-      <article class="hcard">
-        <div class="hphoto" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Le%20Morne%20Peninsula%20in%20Mauritius%20(53697779236).jpg?width=600')"><span class="hstars">5★</span></div>
-        <div class="hbody">
-          <h4><a href="https://www.booking.com/searchresults.html?ss=Maradiva+Villas+Resort+%26+Spa" target="_blank" rel="noopener">Maradiva Villas ↗</a></h4>
-          <div class="hvibe">Private pool villas · luxury</div>
-          <div class="hfoot"><span class="hprice">~3,600<small>/night</small></span><a class="hbook" href="https://www.booking.com/searchresults.html?ss=Maradiva+Villas+Resort+%26+Spa" target="_blank" rel="noopener">Book</a></div>
-        </div>
-      </article>
-    </div>
-
-    <!-- EAST COAST LUXURY ALTERNATIVE -->
-    <div class="coast-label reveal">
-      <span class="pip east"></span><h3 class="serif">East coast · Belle Mare &amp; Flacq</h3><span class="line"></span><small>luxury alternative · all 5★</small>
-    </div>
-    <div class="hmenu reveal">
-      <article class="hcard">
-        <div class="hphoto" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Ile%20aux%20Cerfs001.JPG?width=600')"><span class="hstars">5★</span></div>
-        <div class="hbody">
-          <h4><a href="https://www.booking.com/searchresults.html?ss=Constance+Belle+Mare+Plage" target="_blank" rel="noopener">Constance Belle Mare Plage ↗</a></h4>
-          <div class="hvibe">Iconic · golf · 2 km beach</div>
-          <div class="hfoot"><span class="hprice">~3,000<small>/night</small></span><a class="hbook" href="https://www.booking.com/searchresults.html?ss=Constance+Belle+Mare+Plage" target="_blank" rel="noopener">Book</a></div>
-        </div>
-      </article>
-      <article class="hcard">
-        <div class="hphoto" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Ile%20aux%20Cerfs%20-%20panoramio.jpg?width=600')"><span class="hstars">5★</span></div>
-        <div class="hbody">
-          <h4><a href="https://www.booking.com/searchresults.html?ss=Constance+Prince+Maurice" target="_blank" rel="noopener">Constance Prince Maurice ↗</a></h4>
-          <div class="hvibe">Boutique · pool suites</div>
-          <div class="hfoot"><span class="hprice">~3,400<small>/night</small></span><a class="hbook" href="https://www.booking.com/searchresults.html?ss=Constance+Prince+Maurice" target="_blank" rel="noopener">Book</a></div>
-        </div>
-      </article>
-      <article class="hcard">
-        <div class="hphoto" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Ile%20aux%20Cerfs%20(2994854930).jpg?width=600')"><span class="hstars">5★</span></div>
-        <div class="hbody">
-          <h4><a href="https://www.booking.com/searchresults.html?ss=Anantara+Iko+Mauritius" target="_blank" rel="noopener">Anantara Iko Mauritius ↗</a></h4>
-          <div class="hvibe">Contemporary · overwater spa</div>
-          <div class="hfoot"><span class="hprice">~2,800<small>/night</small></span><a class="hbook" href="https://www.booking.com/searchresults.html?ss=Anantara+Iko+Mauritius" target="_blank" rel="noopener">Book</a></div>
-        </div>
-      </article>
-      <article class="hcard">
-        <div class="hphoto" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/MAURITIUS%20ILE%20AUX%20CERFS%2010%20-%20panoramio.jpg?width=600')"><span class="hstars">5★</span></div>
-        <div class="hbody">
-          <h4><a href="https://www.booking.com/searchresults.html?ss=Four+Seasons+Resort+Mauritius+at+Anahita" target="_blank" rel="noopener">Four Seasons Anahita ↗</a></h4>
-          <div class="hvibe">Pool villas · ultra-luxury</div>
-          <div class="hfoot"><span class="hprice">~4,500<small>/night</small></span><a class="hbook" href="https://www.booking.com/searchresults.html?ss=Four+Seasons+Resort+Mauritius+at+Anahita" target="_blank" rel="noopener">Book</a></div>
-        </div>
-      </article>
-      <article class="hcard">
-        <div class="hphoto" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Ile%20aux%20Cerfs001.JPG?width=600')"><span class="hstars">5★</span></div>
-        <div class="hbody">
-          <h4><a href="https://www.booking.com/searchresults.html?ss=Long+Beach+Mauritius" target="_blank" rel="noopener">Long Beach (Sunlife) ↗</a></h4>
-          <div class="hvibe">Modern · all-suite · value 5★</div>
-          <div class="hfoot"><span class="hprice">~2,400<small>/night</small></span><a class="hbook" href="https://www.booking.com/searchresults.html?ss=Long+Beach+Mauritius" target="_blank" rel="noopener">Book</a></div>
-        </div>
-      </article>
-    </div>
-
-    <div class="note reveal" style="margin-top:.9rem">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-      <div><b>Why the east coast?</b> Belle Mare is Mauritius's most glamorous stretch — endless beach, top golf, and the boat to Île aux Cerfs. It's a long drive from the airport (~1h) and far from the North/West tours, so it suits a <b>single-resort week</b> or a swap for the West leg better than the split-stay above.</div>
-    </div>
-
-    <div class="note reveal" style="margin-top:1rem;background:var(--paper);border:1px solid var(--rule)">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
-      <div><b>Board basis:</b> B&amp;B beats half-board here — Grand Baie and Flic en Flac both have excellent, affordable seafront restaurants. <b>A note on photos:</b> hotels' own marketing images can't be reliably embedded (they hotlink-block external use), so cards show real Mauritius location photography — illustrative of each coastline and resort style. If you have a hotel's own image URL, you can drop it straight into a card's background link. <b>Group tip:</b> booking three rooms of the same dates usually unlocks a long-stay discount — quote it to the hotel directly.</div>
-    </div>
-  </div>
-</section>
-
-<!-- TOURS -->
-<section class="sec" id="tours">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="serif sec-num">04</div>
-      <div>
-        <span class="eyebrow">Tours &amp; activities</span>
-        <h2 class="serif">Four days out, chosen to suit both ages.</h2>
-        <p>Book the boat trips and Casela in advance (December is peak); the land tours are best as private <b>driver-guide</b> days a group of eight can split cheaply. Prices indicative per person unless noted.</p>
-      </div>
-    </div>
-
-    <div class="tour-grid reveal">
-      <article class="tour">
-        <span class="daytag">Day 2 · North</span>
-        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 17l4-1 3-7 3 9 3-5 2 1 3-1"/><path d="M2 20c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 4-2"/></svg></div>
-        <h4 class="serif">Northern Isles Catamaran</h4>
-        <div class="loc">Grand Baie → Coin de Mire · Gabriel · Flat Island</div>
-        <p>Full-day sail with snorkelling stops, BBQ lunch and open bar. The standout family day — calm water, turtles, a beach barbecue on Flat Island.</p>
-        <div class="priceline"><div class="pr"><span class="k">Adult</span><span class="v">~280 AED</span></div><div class="pr"><span class="k">Child</span><span class="v">~150 AED</span></div><div class="pr"><span class="k">Duration</span><span class="v">Full day</span></div></div>
-      </article>
-      <article class="tour">
-        <span class="daytag">Day 3 · North</span>
-        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M9 14h6v7H9z"/></svg></div>
-        <h4 class="serif">North &amp; Port Louis Tour</h4>
-        <div class="loc">Pamplemousses · Port Louis · Cap Malheureux</div>
-        <p>Private driver-guide through the botanical garden, the capital's market &amp; Citadel, and the red-roof chapel. Self-drive is also easy.</p>
-        <div class="priceline"><div class="pr"><span class="k">Driver-guide</span><span class="v">~480 AED/van</span></div><div class="pr"><span class="k">Garden entry</span><span class="v">~10 AED/pp</span></div><div class="pr"><span class="k">Duration</span><span class="v">Full day</span></div></div>
-      </article>
-      <article class="tour">
-        <span class="daytag">Day 4 · South-West</span>
-        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 18l5-7 4 5 3-4 6 6"/><path d="M12 3l8 5-8 5-8-5z"/></svg></div>
-        <h4 class="serif">South-West Highlights</h4>
-        <div class="loc">Trou aux Cerfs · Grand Bassin · Chamarel</div>
-        <p>Volcano crater, the sacred lake &amp; giant Shiva, Black River Gorges and the rainbow dunes of Chamarel — with a rum tasting. Doubles as your transfer day.</p>
-        <div class="priceline"><div class="pr"><span class="k">Driver-guide</span><span class="v">~520 AED/van</span></div><div class="pr"><span class="k">Chamarel entry</span><span class="v">~30 AED/pp</span></div><div class="pr"><span class="k">Duration</span><span class="v">Full day</span></div></div>
-      </article>
-      <article class="tour chill-t">
-        <span class="daytag" style="color:var(--lagoon)">Day 5 · West</span>
-        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M8 14a4 4 0 0 1 8 0"/><path d="M12 7v2"/></svg></div>
-        <h4 class="serif">Casela World of Adventures</h4>
-        <div class="loc">Cascavelle · 20 min from Sugar Beach</div>
-        <p>Safari bus among zebras &amp; rhinos, giraffe feeding, petting farm and zip-lines — the one outing guaranteed to thrill the kids. Half day; beach by lunch.</p>
-        <div class="priceline"><div class="pr"><span class="k">Adult entry</span><span class="v">~120 AED</span></div><div class="pr"><span class="k">Child entry</span><span class="v">~90 AED</span></div><div class="pr"><span class="k">Add-ons</span><span class="v">from ~110 AED</span></div></div>
-      </article>
-    </div>
-
-    <h3 class="serif reveal" style="margin-top:1.6rem;font-size:1.2rem;color:var(--teal-2)">Optional add-ons (for the chill days)</h3>
-    <div class="tour-grid reveal" style="margin-top:.8rem">
-      <article class="tour chill-t">
-        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 16c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 4-2M16 11c2 0 4-1 5-3"/></svg></div>
-        <h4 class="serif">Dawn Dolphin Watch</h4>
-        <div class="loc">Tamarin Bay · early morning</div>
-        <p>Speedboat out at 7 am to find wild spinner &amp; bottlenose dolphins, with a chance to snorkel alongside. Back by breakfast.</p>
-        <div class="priceline"><div class="pr"><span class="k">Per person</span><span class="v">~150 AED</span></div><div class="pr"><span class="k">Duration</span><span class="v">2–3 hrs</span></div></div>
-      </article>
-      <article class="tour chill-t">
-        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 2a10 10 0 0 0 0 20c-3-4-3-16 0-20Z"/></svg></div>
-        <h4 class="serif">West-Coast Sunset Sail</h4>
-        <div class="loc">Le Morne · Crystal Rock · Île aux Bénitiers</div>
-        <p>A leisurely afternoon catamaran past Crystal Rock and the UNESCO cliffs of Le Morne, drinks onboard as the sun sets.</p>
-        <div class="priceline"><div class="pr"><span class="k">Per person</span><span class="v">~230 AED</span></div><div class="pr"><span class="k">Duration</span><span class="v">~5 hrs</span></div></div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- TRANSPORT -->
-<section class="sec" id="transport">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="serif sec-num">05</div>
-      <div>
-        <span class="eyebrow">Getting there &amp; around</span>
-        <h2 class="serif">Island logistics, solved for a group of eight.</h2>
-        <p>Direct flights from Dubai/Sharjah take about six hours — Mauritius shares the UAE's time zone, so no jet lag. On-island, the relaxed move for eight is a single driver-guide van on tour days plus pre-booked minibus transfers.</p>
-      </div>
-    </div>
-
-    <div class="reveal" style="margin-bottom:.9rem">
-      <span class="eyebrow">Flying in — UAE ↔ Mauritius (MRU)</span>
-      <p class="lede" style="font-size:.95rem;margin:.4rem 0 0">Four carriers fly the route in about six hours; all land you local-time-fresh. Mid-December is peak — lock flights the moment dates are firm.</p>
-    </div>
-    <div class="flights reveal">
-      <article class="flight-card"><div class="fc-head"><span class="carrier">Emirates</span><span class="route">DXB ↔ MRU</span></div><p>Daily direct · ~6h · full-service, evening departure</p><div class="fc-price">~3,200–4,200<small>AED return</small></div><a class="fc-link" href="https://www.emirates.com" target="_blank" rel="noopener">emirates.com ↗</a></article>
-      <article class="flight-card"><div class="fc-head"><span class="carrier">Air Mauritius</span><span class="route">DXB ↔ MRU</span></div><p>Direct · ~6h · the island's home carrier</p><div class="fc-price">~3,000–3,800<small>AED return</small></div><a class="fc-link" href="https://www.airmauritius.com" target="_blank" rel="noopener">airmauritius.com ↗</a></article>
-      <article class="flight-card"><div class="fc-head"><span class="carrier">flydubai</span><span class="route">DXB ↔ MRU</span></div><p>Direct · ~6h15 · good-value, often codeshares with Emirates</p><div class="fc-price">~2,600–3,600<small>AED return</small></div><a class="fc-link" href="https://www.flydubai.com" target="_blank" rel="noopener">flydubai.com ↗</a></article>
-      <article class="flight-card"><div class="fc-head"><span class="carrier">Air Arabia</span><span class="route">SHJ ↔ MRU</span></div><p>Direct · ~6h · budget option, departs Sharjah</p><div class="fc-price">~2,600–3,400<small>AED return</small></div><a class="fc-link" href="https://www.airarabia.com" target="_blank" rel="noopener">airarabia.com ↗</a></article>
-    </div>
-
-    <div class="tx-grid reveal">
-      <div class="tx-card">
-        <h4 class="serif">Key transfers &amp; routes</h4>
-        <div class="leg"><div class="route">Flights — UAE ↔ Mauritius<small>Emirates · Air Mauritius · flydubai · ~6h direct</small></div><div class="price">~3,000–3,800<small>AED / person, peak</small></div></div>
-        <div class="leg"><div class="route">Airport → Grand Baie<small>65 km · ~1h10 · pre-booked minibus for 8</small></div><div class="price">~700<small>AED / van, one way</small></div></div>
-        <div class="leg"><div class="route">Grand Baie → Flic en Flac<small>via South-West tour · Day 4 · driver-guide</small></div><div class="price">incl. in tour<small>see Day 4</small></div></div>
-        <div class="leg"><div class="route">Flic en Flac → Airport<small>50 km · ~50 min · departure day</small></div><div class="price">~600<small>AED / van, one way</small></div></div>
-        <div class="leg"><div class="route">Self-drive rental<small>if preferred · left-hand drive (same as UAE) · IDP advised</small></div><div class="price">~600<small>AED / day / car, peak</small></div></div>
-      </div>
-      <div class="pick">
-        <span class="eyebrow">Recommended</span>
-        <h4 class="serif">One van, one driver</h4>
-        <p>For eight, hiring a driver-guide with an 8-seater van for the three land tour days (and transfers) beats self-driving or rebooking taxis. Everyone rides together, nobody navigates, cost splits three ways.</p>
-        <div class="big">~800 <span style="font-size:.85rem;font-family:var(--font-mono);opacity:.8">AED / van / day</span></div>
-        <ul>
-          <li>Door-to-door on tour days, no parking stress</li>
-          <li>Local knowledge — best photo stops &amp; lunch spots</li>
-          <li>Carry your luggage on the hotel-move day for free</li>
-          <li>Book the airport minibus with the same operator for a discount</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BUDGET -->
-<section class="sec" id="budget">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="serif sec-num">06</div>
-      <div>
-        <span class="eyebrow">The numbers</span>
-        <h2 class="serif">Budget — per family.</h2>
-        <p>Accommodation lands inside the ~13,000 AED target (use the calculator above to test other combos). Everything else is shown separately so you can dial it up or down. Indicative mid-December rates; book early — December is peak.</p>
-      </div>
-    </div>
-
-    <div class="budget-wrap reveal">
-      <div>
-        <table>
-          <caption>Accommodation · B&amp;B · per family</caption>
-          <thead><tr><th>Hotel</th><th>Coast</th><th class="num">Nights</th><th class="num">Est. / night</th><th class="num">Subtotal</th></tr></thead>
-          <tbody>
-            <tr><td>Veranda Grand Baie <small style="color:var(--ink-3);font-family:var(--font-mono)">4★</small></td><td>North</td><td class="num">3</td><td class="num">~1,200 AED</td><td class="num">~3,600 AED</td></tr>
-            <tr><td>Sugar Beach <small style="color:var(--ink-3);font-family:var(--font-mono)">4★ sup.</small></td><td>West</td><td class="num">4</td><td class="num">~2,300 AED</td><td class="num">~9,200 AED</td></tr>
-            <tr class="total"><td colspan="4">Accommodation total <span class="badge-ok">within budget</span></td><td class="num">~12,800 AED</td></tr>
-          </tbody>
-        </table>
-        <table style="margin-top:1.1rem">
-          <caption>Other trip costs · per family · excludes flights</caption>
-          <thead><tr><th>Item</th><th class="num">Basis</th><th class="num">Est. total</th></tr></thead>
-          <tbody>
-            <tr><td>Airport &amp; transfer minibuses</td><td class="num">split 3 ways</td><td class="num">~300 AED</td></tr>
-            <tr><td>Driver-guide van (tour days)</td><td class="num">split 3 ways</td><td class="num">~800 AED</td></tr>
-            <tr><td>Tours &amp; activities (4 days)</td><td class="num">2 adults + kids</td><td class="num">~2,200 AED</td></tr>
-            <tr><td>Lunches &amp; dinners (beyond B&amp;B)</td><td class="num">7 days</td><td class="num">~1,900 AED</td></tr>
-            <tr><td>Spending, souvenirs, tips</td><td class="num">buffer</td><td class="num">~800 AED</td></tr>
-            <tr class="gd"><td colspan="2">Other costs subtotal</td><td class="num">~6,000 AED</td></tr>
-            <tr class="total"><td colspan="2">Trip total <small style="font-family:var(--font-mono);font-weight:400;opacity:.8">excl. flights</small></td><td class="num">~18,800 AED</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <aside class="b-callout">
-        <h4 class="serif">Add flights &amp; you're set</h4>
-        <div class="b-row"><span>Accommodation (target)</span><span class="v">~12,800 AED</span></div>
-        <div class="b-row"><span>On-island spend</span><span class="v">~6,000 AED</span></div>
-        <div class="b-row big"><span>Per family, excl. flights</span><span class="v">~18,800 AED</span></div>
-        <div class="b-row" style="border-top:1px solid var(--rule);margin-top:.4rem;padding-top:.8rem"><span>Flights (per person)</span><span class="v">~3,000–3,800 AED</span></div>
-        <p class="b-note">Booking as three families (three rooms, same dates) usually unlocks a group or long-stay discount. Currency reference: <b>1 AED ≈ 7.8 MUR</b>, €1 ≈ 40 MUR, $1 ≈ 46 MUR.</p>
-      </aside>
-    </div>
-  </div>
-</section>
-
-<!-- PRACTICAL -->
-<section class="sec" id="practical">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="serif sec-num">07</div>
-      <div>
-        <span class="eyebrow">Before you go</span>
-        <h2 class="serif">Practical essentials.</h2>
-        <p>Everything worth knowing at a glance — most of it pleasantly in your favour from the UAE.</p>
-      </div>
-    </div>
-
-    <div class="pinfo reveal">
-      <div class="pi"><div class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="5"/><path d="M12 1v3M12 20v3M1 12h3M20 12h3M4 4l2 2M18 18l2 2M4 20l2-2M18 6l2-2"/></svg></div><h4 class="serif">Weather</h4><p>Early summer — <b>~27–31°C</b>, warm &amp; humid with brief showers (often overnight). Sea ~27°C. Cyclone season runs Nov–May but mid-December risk is low.</p></div>
-      <div class="pi"><div class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h4 class="serif">Currency</h4><dl class="kv"><dt>Local</dt><dd>Mauritian Rupee (MUR)</dd><dt>Rate</dt><dd>1 AED ≈ 7.8 MUR</dd><dt>Cards</dt><dd>Widely accepted</dd><dt>ATMs</dt><dd>Plentiful in resorts</dd></dl></div>
-      <div class="pi"><div class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 10l9-7 9 7M5 9v11h14V9"/><path d="M10 20v-5h4v5"/></svg></div><h4 class="serif">Visas &amp; entry</h4><p><b>UAE passport holders:</b> visa-free up to 90 days. <b>Residents:</b> depends on nationality — Mauritius is visa-free/VoA for ~147 countries. Complete the free online <b>"All-in-One" travel form</b>. Passport valid 6+ months.</p></div>
-      <div class="pi"><div class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 8h10v8H4zM14 11h3l3 3v2h-6zM7 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM17 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg></div><h4 class="serif">Driving</h4><dl class="kv"><dt>Side</dt><dd>Left — same as the UAE</dd><dt>Permit</dt><dd>International Driving Permit advised</dd><dt>Speed</dt><dd>City 40 · highway 110 km/h</dd></dl></div>
-      <div class="pi"><div class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h10v12H4zM14 9h4l2 3v6h-6"/><circle cx="8" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></svg></div><h4 class="serif">Power &amp; plugs</h4><dl class="kv"><dt>Types</dt><dd>C, E &amp; G (UK 3-pin)</dd><dt>Voltage</dt><dd>230 V · 50 Hz</dd><dt>Note</dt><dd>UAE Type-G plugs in directly</dd></dl></div>
-      <div class="pi"><div class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12a7 7 0 0 1 14 0M2 12a10 10 0 0 1 20 0M8.5 12a3.5 3.5 0 0 1 7 0"/><circle cx="12" cy="16" r="1"/></svg></div><h4 class="serif">Health &amp; safety</h4><p>No mandatory vaccines. Bring <b>reef-safe sunscreen</b>, mosquito repellent &amp; reef shoes. Bottled water preferred. Take travel insurance.</p></div>
-      <div class="pi"><div class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 5h18M3 12h18M3 19h12"/></svg></div><h4 class="serif">Language &amp; tipping</h4><dl class="kv"><dt>Spoken</dt><dd>English, French &amp; Creole</dd><dt>Tipping</dt><dd>~10% often added; round up</dd><dt>Time</dt><dd>GMT+4 — same as UAE</dd></dl></div>
-      <div class="pi"><div class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l9 4-9 4-9-4 9-4Z"/><path d="M3 12l9 4 9-4M3 18l9 4 9-4"/></svg></div><h4 class="serif">Good to know</h4><p>Reef-protected lagoons make swimming calm almost everywhere. Weekends get busy at local attractions — your driver-guide will time visits. Haggle playfully at markets.</p></div>
-      <div class="pi"><div class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Z"/><path d="M12 8v4l3 2"/></svg></div><h4 class="serif">Emergencies</h4><dl class="kv"><dt>General</dt><dd>112 · 999</dd><dt>Police</dt><dd>148</dd><dt>Ambulance</dt><dd>114</dd></dl></div>
-    </div>
-
-    <div class="sec-head reveal" style="margin-top:1.8rem;padding-bottom:.8rem">
-      <div class="serif sec-num" style="font-size:2rem">✓</div>
-      <div><span class="eyebrow">Don't forget</span><h2 class="serif" style="font-size:1.5rem">Packing checklist.</h2></div>
-    </div>
-    <div class="pack reveal">
-      <div>
-        <h4 class="serif"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--coral)" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg>Essentials</h4>
-        <ul>
-          <li>Passports (6+ months validity)</li><li>Travel insurance documents</li><li>Printed hotel &amp; transfer vouchers</li>
-          <li>Reef-safe sunscreen (SPF 50)</li><li>Hats &amp; UV/rash vests for the kids</li><li>Reef / water shoes</li><li>Refillable water bottles</li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="serif"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--lagoon)" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg>Clothing &amp; extras</h4>
-        <ul>
-          <li>Light, breathable clothing</li><li>Swimwear ×2 per person</li><li>Light rain shell (tropical showers)</li>
-          <li>Smart-casual for resort dinners</li><li>Sunglasses &amp; dry bag for boats</li><li>Snorkel mask (optional)</li><li>Mosquito repellent &amp; basic meds</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
 </main>
 
-<footer>
-  <div class="wrap">
-    <div>
-      <h3 class="serif">Here's to eight days of lagoon, laughter and very little agenda.</h3>
-      <p>This dossier is a planning guide built around a ~13,000 AED-per-family accommodation budget on a B&amp;B basis. All hotel rates, tour prices and transfer costs are indicative mid-December estimates and will move with demand — confirm live pricing before booking, and ask for the group discount for three rooms. Hotel photos are illustrative of each coastline and resort style.</p>
-    </div>
-    <div class="meta">
-      <b>The Mauritius Dossier</b>
-      Prepared 13 June 2026<br>Trip window: 12 – 19 December<br>Party: 3 families · 6 adults · 2 children<br>Currency ref: 1 AED ≈ 7.8 MUR
-    </div>
-    <div class="foot-note">Not affiliated with any hotel, airline or tour operator. Photos via Wikimedia Commons. Prices in AED are approximate conversions for planning only. Always verify visa requirements for your specific passport before travel.</div>
-  </div>
-</footer>
+<button class="print" onclick="window.print()">Print / PDF</button>
+<div class="drawer" id="drawer"><button class="close" onclick="drawer.classList.remove('show')">×</button><h3 id="drawerTitle"></h3><p class="muted" id="drawerText"></p><div class="links" id="drawerLinks"></div></div>
+<footer class="footer wrap">Planning caveat: all hotel costs are indicative. Final booking needs exact child ages, family room fit, taxes/fees, meal plan and cancellation terms checked live.</footer>
 
 <script>
-/* mobile nav */
-(function(){
-  var btn=document.getElementById('menuBtn'),nav=document.getElementById('nav');
-  btn.addEventListener('click',function(){var o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o);});
-  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');btn.setAttribute('aria-expanded',false);});});
-})();
-/* scroll-spy */
-(function(){
-  var links=[].slice.call(document.querySelectorAll('nav.primary a')),map={};
-  links.forEach(function(l){var id=l.getAttribute('href').slice(1);var s=document.getElementById(id);if(s)map[id]=l;});
-  var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(l){l.classList.remove('active');});if(map[e.target.id])map[e.target.id].classList.add('active');}});},{rootMargin:'-45% 0px -50% 0px'});
-  Object.keys(map).forEach(function(id){obs.observe(document.getElementById(id));});
-})();
-/* reveal */
-(function(){
-  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});return;}
-  var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});
-  document.querySelectorAll('.reveal').forEach(function(el){ro.observe(el);});
-})();
-/* mix & match calculator */
-(function(){
-  var n=document.getElementById('northPick'),w=document.getElementById('westPick'),
-      total=document.getElementById('comboTotal'),bar=document.getElementById('comboBar'),status=document.getElementById('comboStatus');
-  var BUDGET=13000;
-  function fmt(x){return x.toLocaleString('en-US');}
-  function update(){
-    var t=(+n.value)*3+(+w.value)*4;
-    total.textContent='~'+fmt(t);
-    var pct=Math.min(100,Math.round(t/BUDGET*100));
-    bar.style.width=pct+'%';
-    var diff=t-BUDGET;
-    bar.className=''; status.className='calc-status';
-    if(diff<=0){bar.classList.add('');status.classList.add('ok');status.textContent='✓ Within budget — ~'+fmt(BUDGET-t)+' AED to spare';}
-    else if(diff<=1500){bar.classList.add('warn');status.classList.add('warn');status.textContent='≈ '+fmt(diff)+' AED over — fine if you flex elsewhere';}
-    else{bar.classList.add('over');status.classList.add('over');status.textContent='~'+fmt(diff)+' AED over — try a cheaper pick';}
-  }
-  n.addEventListener('change',update);w.addEventListener('change',update);update();
-})();
+const packages=[
+ [1,'Best operational fit','Veranda Tamarin','Long Beach Mauritius','AED 11.5k–15k','Best geography + proper resort finish. If Long Beach is too high, switch to Zilwa.'],
+ [2,'Best value with resort feel','Veranda / Seastar','Zilwa Attitude','AED 10k–13k','Good budget discipline while still feeling like a resort holiday.'],
+ [3,'North-family variant','Coin de Mire Attitude','Canonnier / Zilwa','AED 10k–13.5k','Good kids/north feel; pairs with Northern Isles boat day.'],
+ [4,'Premium west-coast sunset','Veranda Tamarin','Sugar Beach','Likely AED 13k+','Use only if Sugar Beach offer is strong or you drop Île aux Cerfs.'],
+ [5,'Budget-control version','Seastar / Aanari','Ravenala / Preskil','AED 7k–10.5k','Leaves money for tours/meals; safest against December price spikes.'],
+ [6,'Airport / Blue Bay convenience','Veranda / Friday Attitude','Shandrani','AED 10k–13.5k','Good for Blue Bay and easy final transfer; less central.']
+];
+const days=[
+ ['Day 1','Sat 12','Arrival','Flic-en-Flac / Tamarin / North','DXB→MRU, private minibus transfer, check-in, pool/beach, early dinner.','No tour. Keep arrival day boring.','Low','chill','https://www.google.com/maps/search/?api=1&query=Sir+Seewoosagur+Ramgoolam+International+Airport+MRU%2C+Mauritius'],
+ ['Day 2','Sun 13','South-West icons','West / South-West','Chamarel, Seven Coloured Earth, waterfall, Black River Gorges, Ganga Talao, optional Le Morne viewpoint/sunset.','Must-do private driver day.','High','active','https://chamarel7colouredearth.com/'],
+ ['Day 3','Mon 14','North + Port Louis','North / Port Louis','Pamplemousses Botanical Garden, L’Aventure du Sucre, Port Louis market/Caudan, Grand Baie or Mont Choisy sunset.','Sugar Museum makes this better for kids.','Medium','active','https://aventuredusucre.com/fr/infos-pratiques/'],
+ ['Day 4','Tue 15','Transfer to resort','Move day','Check out, transfer to resort. Optional Trou aux Cerfs stop only if routing/time works.','Do not turn this into a full tour day.','Medium','chill','https://www.google.com/maps/dir/?api=1&origin=Veranda+Tamarin+Hotel+%26+Spa%2C+Mauritius&destination=Long+Beach+Mauritius+Belle+Mare%2C+Mauritius&travelmode=driving'],
+ ['Day 5','Wed 16','Boat day or resort','Resort area','Choose boat by resort: east = Île aux Cerfs; north = Northern Isles; west = Benitiers.','Weather-dependent; optional.','Medium','active','https://mauritiusattractions.com/mauritius-ile-aux-cerfs-trips-c-42.html'],
+ ['Day 6','Thu 17','Protected hotel day','Resort','Beach, pool, kids club, spa, included water sports.','No van, no sightseeing.','Low','chill',''],
+ ['Day 7','Fri 18','Protected hotel day','Resort','Late breakfast, resort activities, final dinner. Optional micro-plan only.','Avoid last-day logistics.','Low','chill',''],
+ ['Day 8','Sat 19','Departure','MRU','Check out, private transfer to airport. Leave buffer.','Late checkout if flight timing requires.','Medium','chill','https://mauritius-airport.atol.aero/']
+];
+const hotels=[
+ {use:'First base',hotel:'Veranda Tamarin Hotel & Spa',area:'Tamarin / west',decision:'Recommended',cost:'AED 3.5k–5.5k',why:'Best sightseeing base for Chamarel, Le Morne, Casela/Tamarin, Port Louis/North. Better vibe than basic budget hotels.',watch:'Not luxury; verify family-capable rooms and B&B rate.',official:'https://veranda-resorts.com/en/mauritius-hotel-tamarin',map:'https://www.google.com/maps/search/?api=1&query=Veranda+Tamarin+Hotel+%26+Spa%2C+Mauritius'},
+ {use:'First base',hotel:'Coin de Mire Attitude',area:'Bain Boeuf / north',decision:'Recommended backup',cost:'AED 3k–5k',why:'Good north base near Grand Baie; kids club 3–12; likely good value.',watch:'Less efficient for Chamarel/Le Morne; beach across road.',official:'https://hotels-attitude.com/en/coin-de-mire-attitude',map:'https://www.google.com/maps/search/?api=1&query=Coin+de+Mire+Attitude+Hotel+Bain+Boeuf%2C+Mauritius'},
+ {use:'First base',hotel:'Seastar Hotel',area:'Flic-en-Flac',decision:'Budget backup',cost:'AED 1.6k–2.5k',why:'Lowest-cost practical west option; walkable, breakfast often included.',watch:'Not a resort; confirm room fit for family with 12-year-old.',official:'https://www.seastarmauritius.com',map:'https://www.google.com/maps/search/?api=1&query=Seastar+Hotel+Flic+en+Flac+Mauritius'},
+ {use:'First base',hotel:'Aanari Hotel & Spa',area:'Flic-en-Flac',decision:'Budget backup',cost:'AED 1.6k–2.7k',why:'Central and beach-adjacent; useful if price wins.',watch:'Older property; check recent reviews.',official:'https://www.aanari.com',map:'https://www.google.com/maps/search/?api=1&query=Aanari+Hotel+Spa+Flic+en+Flac+Mauritius'},
+ {use:'Resort',hotel:'Long Beach Mauritius',area:'Belle Mare / east',decision:'Top pick',cost:'AED 8k–10.5k target',why:'Best resort finish: big beach, family activities, easy Île aux Cerfs access.',watch:'If quote exceeds target, switch to Zilwa/Ravenala/Shandrani.',official:'https://www.yoursunlife.com/longbeachmauritius/',map:'https://www.google.com/maps/search/?api=1&query=Long+Beach+Mauritius+Belle+Mare%2C+Mauritius'},
+ {use:'Resort',hotel:'Zilwa Attitude',area:'Calodyne / north-east',decision:'Recommended value',cost:'AED 8k–10.5k',why:'Strong value resort with Mauritian character; good if Long Beach is pricey.',watch:'Less polished than Long Beach; book family rooms early.',official:'https://hotels-attitude.com/en/zilwa-attitude',map:'https://www.google.com/maps/search/?api=1&query=Zilwa+Attitude+Mauritius'},
+ {use:'Resort',hotel:'Sugar Beach Mauritius',area:'Flic-en-Flac / west',decision:'Premium alternate',cost:'Likely > AED 10.5k',why:'Beautiful west-coast resort; great sunsets and family setup.',watch:'Likely to exceed total budget unless offer; less efficient for Île aux Cerfs.',official:'https://www.yoursunlife.com/sugarbeachmauritius/',map:'https://www.google.com/maps/search/?api=1&query=Sugar+Beach+Mauritius+Flic+en+Flac%2C+Mauritius'},
+ {use:'Resort',hotel:'Canonnier Beachcomber',area:'North',decision:'Family-safe alternate',cost:'AED 8k–10.5k',why:'Reliable family resort; good if choosing north + Northern Isles boat day.',watch:'Farther from east activities/airport.',official:'https://www.beachcomber-hotels.com/en/hotel/canonnier-beachcomber',map:'https://www.google.com/maps/search/?api=1&query=Canonnier+Beachcomber+Mauritius'},
+ {use:'Resort',hotel:'The Ravenala Attitude',area:'Balaclava / north-west',decision:'Budget-control backup',cost:'AED 6k–9.5k',why:'All-suite layout useful for families; good value backup.',watch:'Beach/lagoon may not feel as premium as Long Beach/Sugar Beach.',official:'https://hotels-attitude.com/en/the-ravenala-attitude',map:'https://www.google.com/maps/search/?api=1&query=The+Ravenala+Attitude+Balaclava%2C+Mauritius'},
+ {use:'Resort',hotel:'Shandrani Beachcomber',area:'Blue Bay / airport',decision:'Airport/Blue Bay backup',cost:'AED 7k–10.5k',why:'Good for Blue Bay, airport convenience, sports/nature activities.',watch:'Not central for west/north sightseeing; best if quote is attractive.',official:'https://www.beachcomber-hotels.com/en/hotel/shandrani-beachcomber',map:'https://www.google.com/maps/search/?api=1&query=Shandrani+Beachcomber+Resort+%26+Spa+Blue+Bay%2C+Mauritius'},
+ {use:'Resort',hotel:'Preskil Island Resort',area:'Mahébourg / south-east',decision:'Budget fallback',cost:'AED 4k–7k',why:'Budget-friendly resort feel; Blue Bay/airport convenient.',watch:'Less premium; location quieter.',official:'https://preskilislandresort.mu/en/home/',map:'https://www.google.com/maps/search/?api=1&query=Preskil+Island+Resort+Mahebourg%2C+Mauritius'}
+];
+const tours=[
+ {cat:'Default',name:'South-West icons private tour',decision:'Must-do',best:'Chamarel, Seven Coloured Earth, Chamarel waterfall, Black River Gorges, Ganga Talao, optional Le Morne viewpoint.',how:'Private 10–12 seater van/driver; skip fixed group bus.',budget:'MUR 5k–7k van/day + entrances/lunch',links:[['Chamarel','https://chamarel7colouredearth.com/'],['Tour ref','https://mauritiustaxitours.mu/portfolio/colorful-south-west-tour']]},
+ {cat:'Default',name:'North + Port Louis + Sugar Museum',decision:'Recommended',best:'Pamplemousses Botanical Garden, L’Aventure du Sucre, Port Louis market/Caudan, Grand Baie/Mont Choisy sunset.',how:'More kid-friendly with Sugar Museum; do not overpack Port Louis.',budget:'MUR 5k–7k van/day + entrances',links:[['Sugar Museum','https://aventuredusucre.com/fr/infos-pratiques/'],['North tour ref','https://mauritius-taxiservice.com/full-day-private-taxi-north-tour-mauritius']]},
+ {cat:'Boat',name:'Île aux Cerfs catamaran / boat',decision:'If east resort',best:'East lagoon, snorkelling, BBQ, waterfall stop.',how:'Use if staying Long Beach/Zilwa/Friday/Preskil; private boat if budget allows.',budget:'Shared cheaper; private catamaran often €795+ total',links:[['Island','https://www.ileauxcerfsleisureisland.com/'],['Boat options','https://mauritiusattractions.com/mauritius-ile-aux-cerfs-trips-c-42.html']]},
+ {cat:'Boat',name:'Northern Isles catamaran',decision:'If north resort',best:'Coin de Mire / northern islands, snorkelling, BBQ.',how:'Use if staying Coin de Mire/Canonnier/north; skip Île aux Cerfs to avoid cross-island transfer.',budget:'Quote required',links:[['Search options','https://www.getyourguide.com/mauritius-l2105/'],['Map','https://www.google.com/maps/search/?api=1&query=Coin+de+Mire+Mauritius']]},
+ {cat:'Boat',name:'West Coast / Benitiers catamaran',decision:'If west resort',best:'Dolphin area, snorkelling, Benitiers Island, BBQ.',how:'Use if staying Sugar Beach/Flic-en-Flac and group wants a boat day.',budget:'Private higher; shared cheaper',links:[['Tour ref','https://mauritiusattractions.com/mauritius-m/full-day-private-luxurious-catamaran-cruise-benitiers-island-p-970.html'],['Map','https://www.google.com/maps/search/?api=1&query=Ile+aux+Benitiers+Mauritius']]},
+ {cat:'Optional',name:'Casela Nature Parks',decision:'Optional swap',best:'Safari, animals, zipline/quad extras.',how:'Use as replacement for boat day or if weather is bad; otherwise it eats chill time.',budget:'Entrance + paid extras',links:[['Official','https://caselaparks.com'],['Tickets ref','https://mauritiusattractions.com/visit-casela-nature-parks-african-safari-adventures-p-82.html']]},
+ {cat:'Transport',name:'Private minibus / driver',decision:'Must-book',best:'Airport transfers, hotel transfer, tour days.',how:'One 10–12 seater with luggage capacity. Avoid small rentals.',budget:'Full-day minibus often MUR 4k–7k+ depending route/season',links:[['Transfer','https://mauritiustransfer.com'],['Minibus ref','https://www.barefoottransfersmauritius.com/affordable-minibus-transfer-mauritius-airport-group-transport-for-515-passengers']]}
+];
+const checks=['Confirm child ages 9 and 12, and whether each family needs one room or a family room/suite.','Get live B&B quotes for Veranda Tamarin, Coin de Mire, Seastar, Aanari for 12–15 Dec.','Get B&B + half-board quotes for Long Beach, Zilwa, Canonnier, Sugar Beach, Ravenala, Shandrani, Preskil for 15–19 Dec.','Choose package by landed total including taxes, child pricing and cancellation terms.','Request one minibus quote for airport pickup/drop, Day 2, Day 3, transfer day, optional Day 5.','Book South-West private tour after hotel base is selected.','Book boat day only after final resort area is selected.','Keep Days 6–7 blocked as no-driver resort days.','Complete Mauritius official travel form closer to departure.'];
+function renderPackages(){packageRows.innerHTML=packages.map(p=>`<tr><td class="rank">${p[0]}</td><td><b>${p[1]}</b></td><td>${p[2]}</td><td>${p[3]}</td><td>${p[4]}</td><td>${p[5]}</td></tr>`).join('')}
+function renderDays(filter='all'){timeline.innerHTML=days.filter(d=>filter==='all'||d[7]===filter).map(d=>`<article class="day"><div class="date"><span>${d[1]}</span><b>${d[0]}</b><span>${d[2]}</span></div><div class="daybody"><div class="daytop"><div><h3>${d[2]} · ${d[3]}</h3><p>${d[4]}</p><p class="muted">${d[5]}</p></div><span class="intensity ${d[6]==='Low'?'low':d[6]==='High'?'high':'med'}">${d[6]}</span></div>${d[8]?`<div class="links"><a href="${d[8]}" target="_blank">Open link</a></div>`:''}</div></article>`).join('')}
+function renderHotels(){const q=hotelSearch.value.toLowerCase(), use=hotelUse.value; hotelGrid.innerHTML=hotels.filter(h=>(use==='all'||h.use===use)&&JSON.stringify(h).toLowerCase().includes(q)).map(h=>`<article class="card ${h.decision.includes('Top')||h.decision.includes('Recommended')?'topPick':''}"><span class="tag ${h.use==='Resort'?'good':'warn'}">${h.use}</span><h3>${h.hotel}</h3><p class="muted"><b>${h.area}</b> · <span class="score">${h.cost}</span></p><p>${h.why}</p><p class="muted"><b>Watch:</b> ${h.watch}</p><div class="links"><a href="${h.official}" target="_blank">Official</a><a href="${h.map}" target="_blank">Map</a><button class="miniBtn" onclick='openDrawer(${JSON.stringify(h.hotel)}, ${JSON.stringify(h.why+' Watch: '+h.watch)}, [["Official",${JSON.stringify(h.official)}],["Map",${JSON.stringify(h.map)}]])'>Details</button></div></article>`).join('')}
+function renderTourTabs(){const cats=['All',...new Set(tours.map(t=>t.cat))];tourTabs.innerHTML=cats.map((c,i)=>`<button class="tab ${i===0?'active':''}" data-cat="${c}">${c}</button>`).join('');tourTabs.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{tourTabs.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderTours(b.dataset.cat)})}
+function renderTours(cat='All'){tourGrid.innerHTML=tours.filter(t=>cat==='All'||t.cat===cat).map(t=>`<article class="card"><span class="tag ${t.decision.includes('Must')?'good':t.decision.includes('Optional')?'warn':''}">${t.decision}</span><h3>${t.name}</h3><p><b>Best for:</b> ${t.best}</p><p class="muted"><b>How:</b> ${t.how}</p><p class="muted"><b>Budget:</b> ${t.budget}</p><div class="links">${t.links.map(l=>`<a href="${l[1]}" target="_blank">${l[0]}</a>`).join('')}</div></article>`).join('')}
+function renderChecks(){const saved=JSON.parse(localStorage.getItem('mauritiusChecks')||'[]');checklistBox.innerHTML=checks.map((c,i)=>`<label><input type="checkbox" ${saved[i]?'checked':''} data-i="${i}"><span>${c}</span></label>`).join('');checklistBox.querySelectorAll('input').forEach(inp=>inp.onchange=()=>{const s=[...checklistBox.querySelectorAll('input')].map(x=>x.checked);localStorage.setItem('mauritiusChecks',JSON.stringify(s))})}
+function openDrawer(title,text,links){drawerTitle.textContent=title;drawerText.textContent=text;drawerLinks.innerHTML=links.map(l=>`<a href="${l[1]}" target="_blank">${l[0]}</a>`).join('');drawer.classList.add('show')}
+renderPackages();renderDays();renderHotels();renderTourTabs();renderTours();renderChecks();
+document.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>renderDays(b.dataset.filter));hotelSearch.oninput=renderHotels;hotelUse.onchange=renderHotels;resetChecks.onclick=()=>{localStorage.removeItem('mauritiusChecks');renderChecks()};
+let compact=true;toggleCompact.onclick=()=>{compact=!compact;document.body.style.fontSize=compact?'15px':'17px';toggleCompact.textContent='Compact: '+(compact?'on':'off')};
 </script>
 </body>
 </html>
